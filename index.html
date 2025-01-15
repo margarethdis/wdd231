@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD231 STUDENT PORTAL</title>
-    <link rel="stylesheet"  href="scripts/document.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@79.6,300&display=swap" rel="stylesheet">
     <meta name="description" content="Aquí va la descripción breve de la página web.">
-    <meta name="author" content="Juan Pérez">
-
+    <meta name="author" content="Margareth Daniela Ramos Discua">
+    <meta name="description"
+        content="Visit Margareth Ramos' student portal, where she updates her projects on the fundamentals of web development using HTML, CSS, and JavaScript.">
 </head>
+
 <body>
-    <header></header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+    <div class="layout-container">
+        <header>
+            <img src="images/perfilpic.jpg" alt= "logo"  class="header-img">
+
+            <h1>Margareth D. Ramos</h1>
+        </header>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Chamber</a></li>
+                    <li><a href="#">GitHub Profile</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <!-- First Card -->
+            <section class="card">
+                <h2>Course work</h2>
+            </section>
+
+            <!-- Second Card -->
+            <section class="card">
+                <h2>La Ceiba , Honduras</h2>
+            </section>
+
+            <!-- Third Card -->
+            <div class="third-card">
+                <section class="card">
+
+                    <h2>Web and Computer Programming Certificate</h2>
+                </section>
+            
+        </main>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> Margareth Ramos, La Ceiba, Honduras</p>
+            <p id="lastModified"></p>
+            <script src="scripts/getdates.js"></script>
+        </footer>
+    </div>
 </body>
+
 </html>
