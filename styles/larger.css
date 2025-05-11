@@ -1,0 +1,125 @@
+header, nav, main, footer {
+    border: 1px dashed red;
+ } /* eliminar al final */
+
+ .card {
+    border: 2px dashed teal;  /* Puedes cambiar el color si quieres */
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset para enlace */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*reset para listas*/
+ul{
+    list-style: none;
+}
+
+/*2 paso del css aplicar el estilo base a tu body*/
+
+/*estilo base para todo el cuerpo*/
+body{
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color:#000000;
+    font-weight: bold;
+
+}
+
+/*estilos header*/
+header{
+    display: flex;
+    margin-bottom: 0px; /*si le pongo margin bottom eso genera un espacio entre el nav y el header */
+    gap: 1rem;
+    align-items: center;
+    background-color: #777;
+    padding: 1rem;
+    justify-content: center;
+    color: #f4f4f4;
+}
+
+nav{
+    background-color: #4b4343;
+    padding: 1rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+
+
+nav ul li a{
+    color:#f5ebeb;
+    padding: 20px ; /*si lo aumentas aumenta el espacio de arriba y abajo*/
+    transition: backgroun-color 0.3s ease;
+}
+
+nav ul li a:hover{
+    background-color: #555;
+}
+
+
+/*estilos cards*/
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:16px;
+
+}
+
+.main-title{
+    grid-column: span 2;
+}
+
+/*Estilo general para las tarjetas*/
+.card, .card-full-width{
+    padding: 10px;
+    border: 1px solid #463f3f;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+.card-full-width{
+    grid-column: span 2;
+
+}
+
+
+
+
+/*estilos para el footer*/
+footer{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #fafafa;
+    background-color: #000000;
+}
+
+
+
+/*estilo para imagenes*/
+img {
+    max-width: 100%;
+    height: auto;
+}
