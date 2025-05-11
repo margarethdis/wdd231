@@ -29,6 +29,7 @@ header {
     padding: 1rem;
     justify-content: center;
     color: #f4f4f4;
+    
 }
 
 nav {
@@ -62,12 +63,30 @@ main {
     padding: 1rem;
 }
 
+
+
 .card, .card-full-width {
-    padding: 10px;
+    padding: 1px;
     border: 1px solid #463f3f;
     border-radius: 8px;
     background-color: #f4f4f4;
     margin: 1rem 0;
+    text-align: center;
+}
+
+.card h2{
+    background-color: #555;
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    color: #f4f4f4;
+}
+
+.card-full-width h2{
+    background-color: #555;
+    border-radius: 4px;
+    color: #f4f4f4;
+    margin: 0;
 }
 
 footer {
