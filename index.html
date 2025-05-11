@@ -42,9 +42,9 @@
         <section class="card">
             <h2>Course Work</h2>
             <ul>
-                <li><a href="#">Assignment 1</a></li>
-                <li><a href="#">Assignment 2</a></li>
-                <li><a href="#">Assignment 3</a></li>
+                <li><a href="#">.</a></li>
+                <li><a href="#">.</a></li>
+                <li><a href="#">.</a></li>
             </ul>
         </section>
 
@@ -57,21 +57,14 @@
         <section class="card-full-width">
             <h2>Web and Computer Programming Certificate</h2>
             <!--barra de filtros-->
-            <ul class="filter-bar">
-                <a href="#" class="filter-btn">All</a>
-                <a href="#" class="filter-btn">CSE</a>
-                <a href="#" class="filter-btn">WDD</a>
-        
+            <div class="filters">
+                <button id="all">All Couses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Couses</button>
+            </div>
 
-        <!--BOTONES DE CURSO EN DOS FILAS-->
-        <section class="course-buttons">
-            <a href="#" class="course-btn">WDD 130</a>
-            <a href="#" class="course-btn">CSE 110</a>
-            <a href="#" class="course-btn">WDD 230</a>
-            <a href="#" class="course-btn">CSE 210</a>
-            <a href="#" class="course-btn">WDD 330</a>
-            <a href="#" class="course-btn">CSE 310</a>
-        </section>
+            <div id="course-list" class="course-list"></div>
+            <p>Total Credits: <span id="total-credits">0</span></p>
         </section>
 
     </main>
@@ -85,6 +78,7 @@
     </footer>
 
     <script src="scripts/date.js"></script>
+    <script src="scripts/couses.js"></script>
 
 </body>
 
