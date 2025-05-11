@@ -84,11 +84,15 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:16px;
+    padding: 20px ;
+   
 
 }
 
 .main-title{
     grid-column: span 2;
+    text-align: center;
+    
 }
 
 /*Estilo general para las tarjetas*/
@@ -97,6 +101,7 @@ main{
     border: 1px solid #463f3f;
     border-radius: 8px;
     background-color: #f4f4f4;
+    
 }
 
 .card-full-width{
@@ -110,10 +115,12 @@ main{
 /*estilos para el footer*/
 footer{
     text-align: center;
+    padding: 20px;
     margin-top: 20px;
     font-size: 0.9em;
     color: #fafafa;
     background-color: #000000;
+    margin-top: 0;
 }
 
 
