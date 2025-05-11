@@ -11,7 +11,7 @@
     
     /*existia un pequeno borde extra , con devtool entontre el prolblema era eso y aqui al solucion:*/
     nav ul li {
-        margin: 0;
+        margin: 5px;
         padding: 0;
     }
 

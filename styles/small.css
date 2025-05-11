@@ -37,6 +37,13 @@ nav {
     padding: 0; /*si le pongo padding los botones tendran un espacio al rededor */
 }
 
+nav a.active{
+    color:#fff;
+    background-color: #0ec917;
+    padding:0.5rem;
+    border-radius: 5px;
+}
+
 nav ul {
     display: block;
     text-align: center;
@@ -52,6 +59,7 @@ nav ul li a {
     color: #f5ebeb;
     padding: 10px;
     transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 nav ul li a:hover {
