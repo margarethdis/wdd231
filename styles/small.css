@@ -108,12 +108,12 @@ main {
 }
 
 .card, .card-full-width {
-    padding: 1px;
+    padding: 0px; /*esto al ponerle 1 px generaba un espacio al rededro qeu parecia una linea blanca*/
     border: 1px solid #463f3f;
     border-radius: 8px;
     background-color: #f4f4f4;
-    margin: 1rem 0;
     text-align: center;
+    margin: 0px 20px ;
 }
 
 .card h2, .card-full-width h2 {
