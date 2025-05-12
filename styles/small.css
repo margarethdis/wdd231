@@ -17,7 +17,7 @@ body {
     font-family: "Arial", sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    color: #000000;
+    color: #000;
     font-weight: bold;
 }
 
@@ -29,49 +29,83 @@ header {
     padding: 1rem;
     justify-content: center;
     color: #f4f4f4;
-    
 }
 
 nav {
     background-color: #4b4343;
-    padding: 0; /*si le pongo padding los botones tendran un espacio al rededor */
+    padding: 0;
 }
 
-nav a.active{
-    color:#fff;
-    background-color: #0ec917;
-    padding:0.5rem;
-    border-radius: 5px;
-}
-
-nav ul {
-    display: block;
-    text-align: center;
-}
-
-nav ul li{
-    margin-bottom: 1rem;
-}
-
-nav ul li a {
-    display: block;
+#hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
     padding: 1rem;
+    width: 100%;
+    text-align: right;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: #4b4343;
+    transition: max-height 0.3s ease-out;
+}
+
+#nav-menu li a {
+    padding: 1rem;
+    display: block;
     color: #f5ebeb;
-    padding: 10px;
     transition: background-color 0.3s ease;
     border-radius: 4px;
 }
 
-nav ul li a:hover {
+#nav-menu li a:hover {
     background-color: #555;
+}
+
+nav a.active {
+    color: #fff;
+    background-color: #0ec917;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    #hamburger {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    #nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-menu li a {
+        border-top: 1px solid #ccc;
+        color: #f3f2f2;
+    }
 }
 
 main {
     display: block;
     padding: 1rem;
 }
-
-
 
 .card, .card-full-width {
     padding: 1px;
@@ -82,7 +116,7 @@ main {
     text-align: center;
 }
 
-.card h2{
+.card h2, .card-full-width h2 {
     background-color: #555;
     border-radius: 4px;
     margin: 0;
@@ -90,22 +124,15 @@ main {
     color: #f4f4f4;
 }
 
-.card-full-width h2{
-    background-color: #555;
-    border-radius: 4px;
-    color: #f4f4f4;
-    margin: 0;
-}
-
-/*tercera tarjeta botones*/
-.course-list{
+.course-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-
-.course-card{
+.course-card {
     padding: 1rem;
     border-radius: 8px;
     background-color: #eee;
@@ -113,7 +140,7 @@ main {
     transition: 0.3s;
 }
 
-.course-card.completed{
+.course-card.completed {
     background-color: #c4f0c5;
     border-left: 5px solid #2e8b57;
 }
@@ -125,25 +152,20 @@ main {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
-  
-  .filters button.active {
+}
+
+.filters button.active {
     background-color: #2e8b57;
     color: white;
     font-weight: bold;
-  }
-  
-
-
-
-
+}
 
 footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
     color: #fafafa;
-    background-color: #000000;
+    background-color: #000;
 }
 
 img {
