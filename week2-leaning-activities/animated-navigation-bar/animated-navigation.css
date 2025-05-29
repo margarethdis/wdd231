@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Header básico */
+header {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Botón hamburguesa */
+#menuBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  top: 10px;
+}
+
+/* Estado abierto - animación en forma de X */
+#menuBtn[aria-expanded="true"] .hamburger {
+  background-color: transparent;
+}
+
+#menuBtn[aria-expanded="true"] .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#menuBtn[aria-expanded="true"] .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Navegación oculta por defecto en móviles */
+.navigation {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #444;
+  transition: max-height 0.4s ease;
+}
+
+/* Navegación abierta */
+.navigation.open {
+  max-height: 300px; /* Ajusta según la cantidad de ítems */
+}
+
+/* Ítems del menú */
+.navigation ul {
+  list-style: none;
+}
+
+.navigation li {
+  border-top: 1px solid #555;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: #555;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  #menuBtn {
+    display: none;
+  }
+
+  .navigation {
+    max-height: none;
+    display: block;
+  }
+
+  .navigation ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navigation li {
+    border-top: none;
+  }
+
+  .navigation a {
+    padding: 1rem 2rem;
+  }
+}
