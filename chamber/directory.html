@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber Directory - La Ceiba Chamber of Commerce</title>
+  <meta name="description"
+    content="Directory of member businesses of the La Ceiba Chamber of Commerce. Learn about our members, their services, and websites." />
+  <meta name="author" content="Margaret Ramos" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Social Media Meta (Open Graph for Facebook) -->
+  <meta property="og:title" content="Business Directory - La Ceiba Chamber of Commerce" />
+  <meta property="og:description"
+    content="Explore local businesses that are part of the La Ceiba Chamber of Commerce and learn about their services and contact information." />
+  <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/la_ceiba.jpg" />
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/base.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Chamber of Commerce - La Ceiba</h1>
+    <nav>
+      <ul>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="view-toggle">
+      <button id="gridBtn">🔳 Grid</button>
+      <button id="listBtn">📋 List</button>
+    </div>
+
+    <div id="membersContainer" class="grid-view">
+      <!-- Aquí se cargará el contenido desde JSON -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact: info@laceiba.org | Tel: +504 9999-9999</p>
+    <p>Margareth Ramos | WDD 231 | Last Modification: <span id="lastModified"></span></p>
+    <p>&copy; <span id="currentYear"></span> Chamber - La Ceiba. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script/dates.js"></script>
+  <script src="script/members.js"></script>
+</body>
+
+</html>

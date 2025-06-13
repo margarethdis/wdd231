@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #004080;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem; /* Ahora el padding está aquí, no en el body */
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #004080;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-toggle button:hover {
+  background-color: #0059b3;
+}
+
+/* Cards Grid */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-view section,
+.list-view section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Centrado del contenido en grid */
+.grid-view section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-view img,
+.list-view img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.grid-view h3,
+.list-view h3 {
+  color: #004080;
+}
+
+/* List View */
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-view section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-view img {
+  max-width: 150px;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+.list-view section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

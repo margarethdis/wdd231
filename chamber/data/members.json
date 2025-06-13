@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Hotel Quinta Real",
+    "address": "Carretera CA-13, La Ceiba",
+    "phone": "+504 2442-3344",
+    "website": "https://quintarealhn.com",
+    "image": "hotel_quinta_real.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Supermercado La Colonia",
+    "address": "Barrio El Centro, La Ceiba",
+    "phone": "+504 2443-0000",
+    "website": "https://lacolina.hn",
+    "image": "la_colonia.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Panadería Bambino",
+    "address": "Colonia Miramar, La Ceiba",
+    "phone": "+504 2443-5678",
+    "website": "https://panaderiabambino.com",
+    "image": "el_bambino.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Cariban Tours",
+    "address": "Barrio Ingles, La Ceiba",
+    "phone": "+504 2440-7777",
+    "website": "https://ceibenostours.com",
+    "image": "caribean_tours.png",
+    "membership": 2
+  },
+  {
+    "name": "Farmacia Simán",
+    "address": "Colonia Las Delicias, La Ceiba",
+    "phone": "+504 2441-2345",
+    "website": "https://farmaciasiman.hn",
+    "image": "siman.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Gimnasio Fit Zone",
+    "address": "Barrio La Isla, La Ceiba",
+    "phone": "+504 2442-9898",
+    "website": "https://fitzoneceiba.hn",
+    "image": "fitzone.png",
+    "membership": 3
+  },
+  {
+    "name": "NOTEC",
+    "address": "Centro Comercial Uniplaza, La Ceiba",
+    "phone": "+504 2443-1212",
+    "website": "https://tecnologiaceibena.hn",
+    "image": "notec.png",
+    "membership": 2
+  }
+]
