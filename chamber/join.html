@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join - La Ceiba Chamber of Commerce</title>
+    <meta name="description" content="Join the La Ceiba Chamber of Commerce" />
+    <meta name="author" content="Margaret Ramos" />
+    <link rel="icon" href="images/fav_chamber.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/home.css" />
+    <link rel="stylesheet" href="style/join.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Chamber of Commerce - La Ceiba</h1>
+        <button id="menu-toggle">☰</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html" aria-current="page">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    </header>
+
+    <main>
+        <h1 class="page-title">Join the Chamber</h1>
+
+        <div class="main-container">
+            <section id="join-container" class="join-grid">
+                <!-- Formulario de membresía -->
+                <form id="membership-form" novalidate>
+                    <h2>Membership Application</h2>
+
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required />
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" />
+
+                    <label for="company">Company Name:</label>
+                    <input type="text" id="company" name="company" />
+
+                    <label for="membership-type">Membership Type:</label>
+                    <select id="membership-type" name="membership-type" required>
+                        <option value="">-- Select One --</option>
+                        <option value="basic">Basic</option>
+                        <option value="premium">Premium</option>
+                        <option value="business">Business</option>
+                        <option value="corporate">Corporate</option>
+                    </select>
+
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+
+                <!-- Opciones de membresía -->
+                <div id="membership-info">
+                    <h2>Membership Options</h2>
+                    <div class="membership-option">
+                        <h3>Basic</h3>
+                        <p>Ideal for individuals looking to connect locally.</p>
+                        <button class="btn learn-more">Learn More</button>
+                    </div>
+                    <div class="membership-option">
+                        <h3>Premium</h3>
+                        <p>For small business owners wanting extra benefits.</p>
+                        <button class="btn learn-more">Learn More</button>
+                    </div>
+                    <div class="membership-option">
+                        <h3>Business</h3>
+                        <p>Great for medium to large businesses with multiple locations.</p>
+                        <button class="btn learn-more">Learn More</button>
+                    </div>
+                    <div class="membership-option">
+                        <h3>Corporate</h3>
+                        <p>For large corporations seeking partnership opportunities.</p>
+                        <button class="btn learn-more">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: info@laceiba.org | Tel: +504 9999-9999</p>
+        <p>Margareth Ramos | WDD 231 | Last Modification: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentYear"></span> Chamber - La Ceiba. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script/dates.js"></script>
+    <script src="script/weather.js"></script>
+    <script src="script/menu.js"></script>
+</body>
+
+</html>
