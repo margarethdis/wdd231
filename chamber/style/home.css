@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+html, body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+
+/* Header */
+header {
+  background-color: #004080;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Botón del menú (hamburguesa) */
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 1001;
+}
+
+/* Estilo base del nav */
+nav {
+  margin-top: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main layout */
+main {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* Estilo para el título principal */
+.page-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  color: #004080;
+}
+
+/* Hero Image */
+#hero {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Call to Action encima de la imagen */
+.hero-cta {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.hero-cta .btn {
+  background-color: #004080;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-cta .btn:hover {
+  background-color: #002d5c;
+}
+
+/* GRID PARA TODAS LAS TARJETAS (6 tarjetas) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tarjeta individual */
+.card {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+}
+
+.card h2 {
+  color: #004080;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h3.tagline {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.1rem;
+}
+
+.business-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.business-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.business-grid .card {
+  flex: 1 1 20%;
+  min-width: 250px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 900px) {
+  .business-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .business-grid .card {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+/* ==== Responsive Menu Fix ==== */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #004080;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

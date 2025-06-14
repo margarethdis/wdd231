@@ -42,8 +42,41 @@ nav a:hover {
 main {
   margin: 2rem auto;
   max-width: 1200px;
-  padding: 0 1rem; /* Ahora el padding está aquí, no en el body */
+  padding: 0 1rem;
 }
+
+/* Hero Image */
+#hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Call to Action */
+#call-to-action {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#call-to-action .btn {
+  background-color: #004080;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#call-to-action .btn:hover {
+  background-color: #002d5c;
+}
+
+
+
+/* View toggle buttons and cards grid from original CSS */
 
 .view-toggle {
   display: flex;
@@ -65,7 +98,6 @@ main {
   background-color: #0059b3;
 }
 
-/* Cards Grid */
 .grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -80,7 +112,6 @@ main {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Centrado del contenido en grid */
 .grid-view section {
   display: flex;
   flex-direction: column;
@@ -100,7 +131,6 @@ main {
   color: #004080;
 }
 
-/* List View */
 .list-view {
   display: flex;
   flex-direction: column;
