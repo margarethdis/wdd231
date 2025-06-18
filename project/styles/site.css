@@ -1,12 +1,47 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e7dfd8;
+    color: #231f20;
+    margin: 0;
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #766758;
+}
+
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #231f20;
+    color: #fff;
+}
+
 .wireframes {
-  text-align: center;
+    text-align: center;
 }
 
 .wireframes img {
-  max-width: 90%;
-  height: auto;
-  margin: 0.5rem;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+    max-width: 90%;
+    height: auto;
+    margin: 0.5rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
