@@ -1,0 +1,12 @@
+.wireframes {
+  text-align: center;
+}
+
+.wireframes img {
+  max-width: 90%;
+  height: auto;
+  margin: 0.5rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
