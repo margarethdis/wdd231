@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Swinford Park",
+    "address": "Barrio El Centro, La Ceiba",
+    "description": "A historic park in downtown La Ceiba with gardens, monuments, and relaxation areas.",
+    "image": "images/parque_swinford.png",
+    "details": "Open daily: 8:00 AM - 6:00 PM | Free entrance | Great for families and picnics."
+  },
+  {
+    "name": "Cayos Cochinos",
+    "address": "Caribbean Sea off the coast of La Ceiba",
+    "description": "A group of protected virgin islands, perfect for diving and ecotourism.",
+    "image": "images/cayos.jpg",
+    "details": "Access via boat tour | Price: $60 per person | Guided snorkeling and hiking tours available."
+  },
+  {
+    "name": "Pico Bonito",
+    "address": "Yaruca Road, Pico Bonito National Park",
+    "description": "National park with trails, waterfalls, hanging bridges, and rich biodiversity.",
+    "image": "images/pico.jpg",
+    "details": "Entry fee: $10 | Open 7:00 AM - 5:00 PM | Guided tours available | Bring hiking shoes."
+  },
+  {
+    "name": "Cabotage Dock",
+    "address": "Port of La Ceiba",
+    "description": "Historic dock used for trade and fishing. An iconic spot in the city.",
+    "image": "images/muelle.jpg",
+    "details": "Open to public | Best time to visit: sunset | No entrance fee | Local fish markets nearby."
+  },
+  {
+    "name": "Ceibeño Boardwalk",
+    "address": "Coastal Boulevard, La Ceiba",
+    "description": "A seaside promenade with beautiful views, restaurants, and outdoor activities.",
+    "image": "images/malecon.jpg",
+    "details": "Restaurants open until 10 PM | Free access | Live music on weekends."
+  },
+  {
+    "name": "Zacate River Waterfalls",
+    "address": "Cangrejal Reserve, La Ceiba",
+    "description": "Beautiful waterfalls surrounded by tropical vegetation, perfect for hiking and photography.",
+    "image": "images/rio_zacate.jpg",
+    "details": "Entry: $5 | Best season: rainy | Access via trail (moderate difficulty) | Bring water shoes."
+  },
+  {
+    "name": "Municipal Museum",
+    "address": "San Isidro Avenue, La Ceiba",
+    "description": "A small museum with cultural, historical artifacts and exhibits from the city.",
+    "image": "images/museo.jpg",
+    "details": "Admission: $3 | Hours: Mon-Fri 9 AM - 4 PM | Guided tours available in Spanish."
+  }
+]

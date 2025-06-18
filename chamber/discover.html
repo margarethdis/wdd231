@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover La Ceiba - Chamber of Commerce</title>
+  <meta name="description" content="Discover page for La Ceiba Chamber of Commerce">
+  <meta name="author" content="Margaret Ramos">
+  <link rel="icon" href="images/fav_chamber.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style/home.css" />
+  <link rel="stylesheet" href="style/discover.css" />
 </head>
+
 <body>
-    
+  <header>
+    <h1>Chamber of Commerce - La Ceiba</h1>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  </header>
 
+  <main class="discover-layout">
+    <aside class="visitor-message" id="visitorMessage"></aside>
 
-    <script src="script/ceiba_places.js" type="module"></script>
+    <section class="card-container" id="discover-cards">
+      <!-- Cards will be injected here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: info@laceiba.org | Tel: +504 9999-9999</p>
+    <p>Margareth Ramos | WDD 231 | Last Modification: <span id="lastModified"></span></p>
+    <p>&copy; <span id="currentYear"></span> Chamber - La Ceiba. All rights reserved.</p>
+  </footer>
+
+  <script src="script/menu.js"></script>
+  <script src="script/dates.js"></script>
+  <script src="script/discover.js"></script>
 </body>
-
-
-
 </html>
