@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Luna",
+    "image": "images/siames.jpg",
+    "breed": "Siamese",
+    "age": "1 year",
+    "description": "Playful and affectionate, Luna loves to cuddle and sunbathe by the window."
+  },
+  {
+    "name": "Milo",
+    "image": "images/tabby.jpg",
+    "breed": "Tabby",
+    "age": "8 months",
+    "description": "Milo is curious and brave, always the first to explore new places."
+  },
+  {
+    "name": "Nala",
+    "image": "images/coon.jpg",
+    "breed": "Maine Coon",
+    "age": "2 years",
+    "description": "Gentle and majestic, Nala is a calm presence who loves brushing sessions."
+  },
+  {
+    "name": "Simba",
+    "image": "images/ginger.jpg",
+    "breed": "Ginger",
+    "age": "6 months",
+    "description": "Energetic and fun, Simba enjoys toys and chasing laser lights."
+  },
+  {
+    "name": "Chloe",
+    "image": "images/tortoiseshell.jpg",
+    "breed": "Tortoiseshell",
+    "age": "3 years",
+    "description": "Independent and smart, Chloe appreciates quiet moments and gentle company."
+  },
+  {
+    "name": "Oreo",
+    "image": "images/black_and.jpg",
+    "breed": "Black & White",
+    "age": "10 months",
+    "description": "Oreo is sweet and friendly, always ready to greet visitors with purrs."
+  }
+]
