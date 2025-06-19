@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tips - Wiki Cat 🐾</title>
+    <meta name="description" content="Cat care tips and helpful advice for cat lovers." />
+    <meta name="author" content="Margaret Ramos" />
+
+    <link rel="icon" href="images/fav_chamber.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/cat_home.css" />
+    <link rel="stylesheet" href="styles/tips.css" />
+    <link rel="stylesheet" href="styles/adopt.css">
+</head>
+
+<body>
+    <header>
+        <h1>Wiki Cat</h1>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    </header>
+
+
+    <main class="adopt-main">
+        <!-- Imagen redonda y texto introductorio -->
+        <section class="adopt-intro">
+            <img src="images/adopt_cat_round.png" alt="Cat ready to be adopted" class="adopt-cat-img">
+            <h2>Ready to have a new friend?</h2>
+            <p>Prrrrfect! Fill out the formulary.<br>
+                You are one step closer to a new adventure!</p>
+        </section>
+
+        <!-- Formulario de adopción -->
+        <section class="adoption-form">
+            <h3>Adoption Request</h3>
+            <form action="#" method="post">
+                <label>Full Name:
+                    <input type="text" name="fullname" required>
+                </label>
+
+                <label>Email:
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>Phone Number:
+                    <input type="tel" name="phone" required>
+                </label>
+
+                <label>Address:
+                    <input type="text" name="address" required>
+                </label>
+
+                <label>Type of Home:
+                    <select name="home-type" required>
+                        <option value="">-- Select --</option>
+                        <option value="House">House</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                <label>Why do you want to adopt a cat?
+                    <textarea name="reason" rows="4" required></textarea>
+                </label>
+
+                <label>Do you currently have other pets?
+                    <select name="other-pets" required>
+                        <option value="">-- Select --</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp" />
+
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: info@wiki-cat.org | Tel: +504 9999-9999</p>
+        <p>Margareth Ramos | WDD 231 | Last Modification: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentYear"></span> Wiki Cat. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script/dates.js"></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/tips-interactions.js" defer></script>
+</body>
+
+</html>

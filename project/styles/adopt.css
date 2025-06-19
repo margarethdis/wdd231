@@ -1,0 +1,83 @@
+.adopt-main {
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.adopt-intro {
+  margin-bottom: 2rem;
+}
+
+.adopt-cat-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.adopt-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #a0522d;
+  margin-bottom: 0.5rem;
+}
+
+.adopt-intro p {
+  font-size: 1.1rem;
+  color: #4a3c2a;
+  line-height: 1.5;
+}
+
+.adoption-form h3 {
+  font-size: 1.5rem;
+  color: #a0522d;
+  margin-bottom: 1rem;
+}
+
+.adoption-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.adoption-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #4a3c2a;
+}
+
+.adoption-form input,
+.adoption-form select,
+.adoption-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.adoption-form textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7a3b1b;
+}

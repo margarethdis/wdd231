@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips - Wiki Cat 🐾</title>
+  <meta name="description" content="Cat care tips and helpful advice for cat lovers." />
+  <meta name="author" content="Margaret Ramos" />
+
+  <link rel="icon" href="images/fav_chamber.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/cat_home.css" />
+  <link rel="stylesheet" href="styles/tips.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Wiki Cat</h1>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tips.html" class="active">Tips</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="tips-hero">
+      <img src="images/hero_tips.png" alt="Cat looking curious" />
+      <div class="hero-cta">
+        <p>Discover useful care tips for your cat, and fun facts you should know based on their color and unique characteristics.</p>
+      </div>
+    </section>
+       
+      </div>
+      <div id="stage-info" class="info-box hidden"></div>
+    </section>
+
+
+    <!-- 3. Cat Colors -->
+    <section id="cat-colors" class="color-section">
+      <h2>What color is your cat?</h2>
+      <div class="color-grid">
+        <div class="color-card" data-color="black">
+          <img src="images/colors/black_cat.png" alt="Black Cat" />
+          <p>Black Cat</p>
+        </div>
+        <div class="color-card" data-color="white">
+          <img src="images/colors/white_cat.png" alt="White Cat" />
+          <p>White Cat</p>
+        </div>
+        <div class="color-card" data-color="ginger">
+          <img src="images/colors/ginger_cat.png" alt="Ginger Cat" />
+          <p>Ginger Cat</p>
+        </div>
+        <div class="color-card" data-color="gray">
+          <img src="images/colors/gray_cat.png" alt="Gray Cat" />
+          <p>Gray Cat</p>
+        </div>
+        <div class="color-card" data-color="tabby">
+          <img src="images/colors/tabby_cat.png" alt="Tabby Cat" />
+          <p>Tabby Cat</p>
+        </div>
+        <div class="color-card" data-color="calico">
+          <img src="images/colors/calico_cat.png" alt="Calico Cat" />
+          <p>Calico Cat</p>
+        </div>
+      </div>
+      <div id="color-info" class="info-box hidden"></div>
+    </section>
+
+    <!-- 4. Cat Emotions -->
+    <section id="cat-emotions" class="emotion-section">
+      <h2>Cat emotions explained</h2>
+      <div class="emotion-grid">
+        <div class="emotion-card" data-emotion="interested">
+          <img src="images/emotions/interested.png" alt="Interested" />
+          <p>Interested</p>
+        </div>
+        <div class="emotion-card" data-emotion="friendly">
+          <img src="images/emotions/friendly.png" alt="Friendly" />
+          <p>Friendly</p>
+        </div>
+        <div class="emotion-card" data-emotion="relaxed">
+          <img src="images/emotions/relaxed.png" alt="Relaxed" />
+          <p>Relaxed</p>
+        </div>
+        <div class="emotion-card" data-emotion="trusting">
+          <img src="images/emotions/trusting.png" alt="Trusting" />
+          <p>Trusting</p>
+        </div>
+        <div class="emotion-card" data-emotion="conflicted">
+          <img src="images/emotions/conflicted.png" alt="Conflicted" />
+          <p>Conflicted</p>
+        </div>
+        <div class="emotion-card" data-emotion="playful">
+          <img src="images/emotions/playful.png" alt="Playful" />
+          <p>Playful</p>
+        </div>
+        <div class="emotion-card" data-emotion="excited">
+          <img src="images/emotions/excited.png" alt="Excited" />
+          <p>Excited</p>
+        </div>
+        <div class="emotion-card" data-emotion="marking">
+          <img src="images/emotions/marking.png" alt="Marking Territory" />
+          <p>Marking</p>
+        </div>
+        <div class="emotion-card" data-emotion="anxious">
+          <img src="images/emotions/anxious.png" alt="Anxious" />
+          <p>Anxious</p>
+        </div>
+      </div>
+      <div id="emotion-info" class="info-box hidden"></div>
+    </section>
+
+    <!-- 5. Final Thank You Section -->
+    <section class="final-message">
+      <h2>Thank you for visiting Wiki Cat.</h2>
+      <p>We hope this site helped you understand and connect more deeply with your feline friend.<br />
+        Remember: every cat is a world full of love, mystery, and unique meows.<br />
+        Your curiosity and care make all the difference in their life!</p>
+      <a href="index.html" class="btn-back-home">Back Home</a>
+      <img src="images/cat_front.png" alt="Cat front" class="cat-foreground" />
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: info@wiki-cat.org | Tel: +504 9999-9999</p>
+    <p>Margareth Ramos | WDD 231 | Last Modification: <span id="lastModified"></span></p>
+    <p>&copy; <span id="currentYear"></span> Wiki Cat. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script/dates.js"></script>
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/tips-interactions.js" defer></script>
+</body>
+
+</html>
