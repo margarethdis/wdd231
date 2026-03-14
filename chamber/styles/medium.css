@@ -1,0 +1,26 @@
+/* Layout for Tablets */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+#menu {
+    display: none; /* Hide hamburger menu */
+}
+
+.navigation {
+    display: flex !important; /* Always show nav */
+    flex-direction: row;
+}
+
+.navigation li a {
+    border: none;
+}
+
+.spotlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
