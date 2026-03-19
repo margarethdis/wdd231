@@ -1,0 +1,50 @@
+/* --- ESTILOS PARA PANTALLAS GRANDES (Desktop) --- */
+@media (min-width: 640px) {
+    
+    /* 1. Ocultamos el botón de hamburguesa porque aquí el menú siempre se ve */
+    #menu {
+        display: none;
+    }
+
+    /* 2. Ajustamos la navegación para que sea horizontal */
+    .navigation {
+        display: flex !important; /* Forzamos a que se vea aunque no tenga la clase 'show' */
+        flex-direction: row;
+        justify-content: center;
+        background-color: #000;
+    }
+
+    .navigation li {
+        flex: 1;
+        max-width: 200px;
+    }
+
+    .navigation li a {
+        border-bottom: none;
+        border-right: 1px solid #333; /* Una línea divisoria elegante entre botones */
+    }
+
+    /* Quitamos la línea al último botón del menú */
+    .navigation li:last-child a {
+        border-right: none;
+    }
+
+    /* 3. Distribución de las Tarjetas (Grid de 2 columnas) */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Izquierda más ancha que derecha */
+        gap: 30px;
+        align-items: start;
+    }
+
+    /* 4. La tarjeta de Cursos ocupa todo el ancho abajo */
+    .courses {
+        grid-column: 1 / 3; /* Se expande desde la columna 1 hasta la 3 */
+    }
+
+    /* 5. Ajuste opcional para el Header en PC */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

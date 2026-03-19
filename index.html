@@ -9,13 +9,82 @@
     <link rel="stylesheet" href="styles/small.css">
 
     <link rel="stylesheet" href="styles/larger.css">
-    
+
     <title>Document</title>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    
+   <header>
+    <div class="logo-container">
+        <img src="images/logo.svg" alt="Logo de Margareth Dani" width="60" height="60">
+        <span>Margareth Ramos</span>
+    </div>
+
+    <button id="menu" aria-label="Abrir menú"></button>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber Project</a></li>
+            <li><a href="project/index.html">Final Project</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Home</h1>
+
+    <div class="grid-container">
+        
+        <section class="card">
+            <h2>About Me</h2>
+            <p>
+                I am Margareth Ramos, a Software Development student passionate about web design 
+    and creating interactive digital solutions. Beyond coding, I am a pianist and 
+    I'm currently building my personal brand on TikTok, where I explore the world 
+    of UGC (User-Generated Content) and digital storytelling
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Student Photo</h2>
+            <img src="images/foto_perfil.jpg" alt="Foto de Margareth Dani" loading="lazy">
+        </section>
+
+        <section class="card courses">
+            <h2>Web Certificate Courses</h2>
+            
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div id="course-list"></div>
+
+            <p id="total-credits"></p>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/tu-perfil" target="_blank">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn de Margareth" width="30" height="30">
+            </a>
+
+            <a href="https://github.com/tu-usuario" target="_blank">
+                <img src="images/github.svg" alt="GitHub de Margareth" width="30" height="30">
+            </a>
+        </div>
+        
+        <p>&copy;<span id="currentyear"></span> ● Margareth Ramos ● Honduras</p>
+        <p id="lastModified"></p>
+    </footer>    
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </body>
 </html>

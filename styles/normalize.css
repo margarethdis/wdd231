@@ -1,0 +1,33 @@
+/* 1. Asegura que el tamaño de las cajas incluya el borde y el padding */
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%; /* Evita cambios de fuente en iOS */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* 2. Quita los márgenes por defecto del cuerpo */
+body {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 3. Asegura que las imágenes no se salgan de su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. Unifica la tipografía de los botones y formularios */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+/* 5. Quita el borde de las imágenes dentro de enlaces en algunos navegadores */
+img {
+    border-style: none;
+}
