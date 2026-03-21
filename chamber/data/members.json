@@ -1,0 +1,65 @@
+[
+    {
+        "name": "SPS Tech Solutions",
+        "addresses": "Ave. Circunvalación, Edificio 5, San Pedro Sula",
+        "phone": "+(504) 2550-1234",
+        "website": "https://spstech.com",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Gold",
+        "other": "Software Development & IT Support"
+    },
+    {
+        "name": "Baleadas Express",
+        "addresses": "Barrio Guamilito, 3ra Ave, San Pedro Sula",
+        "phone": "+(504) 2552-4321",
+        "website": "https://baleadasexpress.hn",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Silver",
+        "other": "Traditional Honduran Cuisine"
+    },
+    {
+        "name": "Café Guamilito",
+        "addresses": "Plaza Moderna, Local 12, San Pedro Sula",
+        "phone": "+(504) 2557-8899",
+        "website": "https://cafeguamilito.hn",
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Bronze",
+        "other": "Specialty Coffee and Pastries"
+    },
+    {
+        "name": "Honduras Web Design",
+        "addresses": "Colonia Trejo, Calle 10, San Pedro Sula",
+        "phone": "+(504) 9988-1122",
+        "website": "https://hondurasweb.design",
+        "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Gold",
+        "other": "Digital Marketing & Design"
+    },
+    {
+        "name": "Constructora del Norte",
+        "addresses": "SPS Industrial Park, Bodega 4",
+        "phone": "+(504) 2560-0011",
+        "website": "https://constructoranorte.hn",
+        "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Silver",
+        "other": "Infrastructure & Housing"
+    },
+    {
+        "name": "Librería Moderna",
+        "addresses": "Centro Comercial Multiplaza, SPS",
+        "phone": "+(504) 2551-9900",
+        "website": "https://moderna.hn",
+        "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Bronze",
+        "other": "Books and Office Supplies"
+    },
+    {
+        "name": "Gimnasio Fitness Real",
+        "addresses": "Boulevard del Norte, Edificio Power",
+        "phone": "+(504) 9900-5566",
+        "website": "https://fitnessreal.hn",
+        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=200&h=150&auto=format&fit=crop",
+        "membershipLevel": "Gold",
+        "other": "Health & Wellness Center"
+    }
+]
