@@ -42,11 +42,23 @@
         gap: 2rem;
     }
 
-    /* 4. Footer: Organización en columnas */
+    /* 4. Footer: Organización en columnas con ancho controlado */
     .footer-top {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* Mantiene la separación... */
         align-items: center;
         text-align: left;
+        
+        /* ESTO ES LO QUE LOS TRAE HACIA ADENTRO */
+        max-width: 1000px;  /* Controla qué tan separados pueden estar */
+        margin: 0 auto;    /* Centra todo el bloque en la pantalla */
+        padding: 0 2rem;   /* Espacio extra a los lados para que no toquen el borde */
+    }
+
+    /* Opcional: Si quieres que los iconos de redes sociales 
+       no se vean muy alejados de los textos */
+    .footer-social {
+        margin: 0; /* Quita el margen que pusimos en móvil */
+        gap: 1.5rem; /* Espacio cómodo entre iconos */
     }
 }
