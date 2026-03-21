@@ -14,8 +14,7 @@ body {
 
 /* 2. Header y Logo */
 header {
-    background-color: #274060;
-    /* Azul corporativo */
+    background-color: #000000;
     color: white;
     padding: 1rem;
     display: flex;
@@ -39,23 +38,18 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     display: block;
-    /* Asegura que se vea en móvil */
 }
 
-/* Control de iconos dentro del botón (Hamburguesa vs X) */
 #menu span:nth-child(2) {
     display: none;
-    /* Oculta la X al inicio */
 }
 
 #menu.open span:nth-child(1) {
     display: none;
-    /* Oculta la hamburguesa al abrir */
 }
 
 #menu.open span:nth-child(2) {
     display: block;
-    /* Muestra la X al abrir */
 }
 
 /* 4. Navegación */
@@ -66,12 +60,10 @@ nav {
 .navigation {
     list-style: none;
     display: none;
-    /* Oculto en móvil por defecto */
     flex-direction: column;
     background-color: #335c81;
 }
 
-/* Clase que activa el JavaScript */
 .navigation.open {
     display: flex !important;
 }
@@ -105,7 +97,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Botones de Vista (Grid/List) */
 .view-buttons {
     display: flex;
     gap: 0.5rem;
@@ -136,12 +127,21 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* AJUSTE DEL LOGO EN EL FOOTER */
+.footer-top img {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 1rem;
+}
+
 .footer-bottom {
     font-size: 0.9rem;
     color: #ccc;
 }
 
-/* Estilo de las tarjetas del directorio */
+/* --- ESTILOS DEL DIRECTORIO --- */
+
+/* Estilo Grid (Cuadrícula) */
 #directory-cards.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -183,55 +183,74 @@ footer {
     text-decoration: none;
 }
 
-/* --- Estilos para la Vista de Lista (AÑADIR ESTO AL FINAL) --- */
-
+/* Estilo Lista (Corregido para la Rúbrica) */
 #directory-cards.list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 1rem;
 }
 
 #directory-cards.list section {
     display: flex;
-    /* Alinea imagen y texto horizontalmente */
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    /* Texto a la izquierda en lista */
-    padding: 1rem;
+    padding: 0.8rem;
     gap: 1.5rem;
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
 }
 
+/* OCULTAR IMÁGENES EN LISTA (Requisito de la Rúbrica) */
 #directory-cards.list section img {
-    width: 80px;
-    /* Imagen más pequeña en lista */
-    height: 60px;
-    margin-bottom: 0;
-    object-fit: cover;
+    display: none;
 }
 
 #directory-cards.list section h3 {
-    width: 25%;
-    /* El nombre ocupa un cuarto */
+    width: 30%;
     margin: 0;
+    font-size: 1.1rem;
 }
 
 #directory-cards.list section p {
     font-size: 0.9rem;
     margin: 0;
-    width: 20%;
-    /* El teléfono y dirección ocupan el resto */
+    width: 25%;
 }
 
 #directory-cards.list section a {
     margin-top: 0;
     margin-left: auto;
-    /* El enlace va a la derecha */
 }
 
-/* Ocultar el nivel de membresía en lista (para que no se amontone) */
+/* Ocultar nivel de membresía en lista para mayor limpieza */
 #directory-cards.list section p:last-of-type {
     display: none;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espacio entre iconos */
+    margin: 1rem 0;
+}
+
+.footer-social img {
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+.footer-social img:hover {
+    transform: scale(1.15); /* Efecto pro al pasar el mouse */
+    filter: brightness(0.8);
+}
+
+/* Esto convierte la imagen a color en blanco y negro, y luego invierte el color negro a blanco */
+.invert-icon img {
+    filter: grayscale(100%) invert(100%) brightness(200%);
 }

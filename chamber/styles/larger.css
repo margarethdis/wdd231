@@ -1,0 +1,52 @@
+/* Este código solo se activa en pantallas grandes */
+@media screen and (min-width: 640px) {
+    
+    /* 1. Ajuste del Header: Logo y Texto a la par */
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 1.5rem;
+    }
+
+    /* 2. Navegación: Ocultar botón y mostrar enlaces horizontalmente */
+    #menu {
+        display: none; /* Desaparece el botón de hamburguesa */
+    }
+
+    .navigation {
+        display: flex !important; /* Siempre visible en Desktop */
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    .navigation li {
+        flex: 1 1 auto;
+    }
+
+    .navigation li a {
+        border-bottom: none;
+        padding: 1rem 2rem;
+    }
+
+    /* 3. Directorio en Grid: 3 columnas en lugar de 1 */
+    #directory-cards.grid {
+        grid-template-columns: repeat(3, 1fr); /* Forzamos 3 columnas */
+        gap: 2rem;
+    }
+
+    /* 4. Footer: Organización en columnas */
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
