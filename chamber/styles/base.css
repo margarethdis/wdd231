@@ -1,15 +1,120 @@
-/* --- HOME PAGE BASE (Mobile First) --- */
+/* --- 1. CONFIGURACIONES GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* --- 2. HEADER Y LOGO --- */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.header-container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+}
+
+/* --- 3. MENÚ HAMBURGUESA (Botón) --- */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block; /* Visible en móvil */
+}
+
+/* Control de iconos Hamburguesa vs Equis */
+#menu span:nth-child(2) {
+    display: none;
+}
+
+#menu.open span:nth-child(1) {
+    display: none;
+}
+
+#menu.open span:nth-child(2) {
+    display: block;
+}
+
+/* --- 4. NAVEGACIÓN (Mobile First) --- */
+nav {
+    width: 100%;
+}
+
+.navigation {
+    list-style: none; /* QUITA LOS PUNTOS DE LA LISTA */
+    display: none;    /* OCULTO POR DEFECTO EN MÓVIL */
+    flex-direction: column;
+    background-color: #335c81; /* Azul SPS */
+}
+
+/* Clase que activa el JS para mostrar el menú */
+.navigation.open {
+    display: flex !important;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+    background-color: #1b2d45;
+    color: #ffcc00; /* Resalte amarillo al pasar el mouse */
+}
+
+/* --- 5. MAIN CONTENT & HOME GRID --- */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 10px;
 }
 
+/* --- 6. HERO SECTION --- */
 .hero {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #000;
@@ -19,7 +124,7 @@
     width: 100%;
     height: auto;
     display: block;
-    opacity: 0.6; /* Un poco más oscuro para que el texto resalte más */
+    opacity: 0.6;
 }
 
 .hero-box {
@@ -29,14 +134,14 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    width: 85%;
+    width: 90%;
     padding: 20px;
-    background-color: rgba(51, 92, 129, 0.8); /* El azul SPS con transparencia */
+    background-color: rgba(51, 92, 129, 0.85); /* Fondo azul traslúcido */
     border-radius: 10px;
 }
 
 .hero-box h1 {
-    font-size: 1.5rem; /* Ajustado para pantallas pequeñas */
+    font-size: 1.4rem;
     margin-bottom: 10px;
 }
 
@@ -44,20 +149,14 @@
     display: inline-block;
     background-color: #ffcc00;
     color: #000;
-    padding: 12px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     margin-top: 10px;
-    transition: 0.3s;
 }
 
-.cta-btn:hover {
-    background-color: #e6b800;
-    transform: scale(1.05);
-}
-
-/* --- TARJETAS DE CLIMA Y EVENTOS --- */
+/* --- 7. WEATHER & EVENTS CARDS --- */
 #weather-card, .events-card {
     background-color: white;
     padding: 1.5rem;
@@ -66,19 +165,19 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* --- SPOTLIGHTS (MIEMBROS) --- */
+/* --- 8. SPOTLIGHTS (Empresas) --- */
 .spotlight-container {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna en móvil */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
 .spotlight-card {
-    background-color: white;
-    padding: 1.5rem;
+    background: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 1.5rem;
     text-align: center;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,9 +185,9 @@
 
 .spotlight-card img {
     max-width: 150px;
-    max-height: 100px; /* Evita que logos muy altos deformen la tarjeta */
+    max-height: 100px;
     object-fit: contain;
-    margin: 10px 0;
+    margin-bottom: 1rem;
 }
 
 .level-tag {
@@ -96,5 +195,45 @@
     font-weight: bold;
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+/* --- 9. FOOTER --- */
+footer {
+    background-color: #02050a;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-top img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 1rem 0;
+}
+
+.footer-social img {
+    transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+    color: #ccc;
 }

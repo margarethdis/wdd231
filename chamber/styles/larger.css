@@ -1,122 +1,121 @@
-/* Este código solo se activa en pantallas grandes */
-@media screen and (min-width: 640px) {
+/* Este código solo se activa en pantallas grandes (Desktop/Tablet) */
+@media screen and (min-width: 768px) {
     
-    /* 1. Ajuste del Header: Logo y Texto a la par */
+    /* 1. AJUSTE DEL HEADER: Logo a la izquierda y Nav a la derecha */
     header {
         flex-direction: row;
-        justify-content: space-around;
-        padding: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        text-align: left;
     }
 
     .header-container {
-        display: flex;
-        align-items: center;
-        text-align: left;
+        flex-direction: row;
         gap: 1.5rem;
+        margin-bottom: 0;
     }
 
-    /* 2. Navegación: Ocultar botón y mostrar enlaces horizontalmente */
+    .header-container img {
+        width: 80px; /* Un poco más pequeño para Desktop */
+        margin-bottom: 0;
+    }
+
+    /* 2. NAVEGACIÓN DESKTOP: Ocultar botón y mostrar enlaces */
     #menu {
         display: none; /* Desaparece el botón de hamburguesa */
     }
 
-    .navigation {
-        display: flex !important; /* Siempre visible en Desktop */
-        flex-direction: row;
-        justify-content: center;
-        background-color: transparent;
+    nav {
+        width: auto;
     }
 
-    .navigation li {
-        flex: 1 1 auto;
+    .navigation {
+        display: flex !important; /* Siempre visible */
+        flex-direction: row;
+        background-color: transparent;
+        gap: 10px;
     }
 
     .navigation li a {
         border-bottom: none;
-        padding: 1rem 2rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 4px;
     }
 
-    /* 3. Directorio en Grid: 3 columnas en lugar de 1 */
-    #directory-cards.grid {
-        grid-template-columns: repeat(3, 1fr); /* Forzamos 3 columnas */
+    .navigation li a:hover,
+    .navigation li a.active {
+        background-color: #335c81;
+        color: #ffcc00;
+    }
+
+    /* 3. HOME GRID (3 COLUMNAS) */
+    .home-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+        align-items: start;
     }
 
-    /* 4. Footer: Organización en columnas con ancho controlado */
-    .footer-top {
-        display: flex;
-        justify-content: space-between; /* Mantiene la separación... */
-        align-items: center;
-        text-align: left;
-        
-        /* ESTO ES LO QUE LOS TRAE HACIA ADENTRO */
-        max-width: 1000px;  /* Controla qué tan separados pueden estar */
-        margin: 0 auto;    /* Centra todo el bloque en la pantalla */
-        padding: 0 2rem;   /* Espacio extra a los lados para que no toquen el borde */
+    /* El Hero ocupa las 3 columnas arriba */
+    .hero {
+        grid-column: 1 / -1;
     }
 
-    /* Opcional: Si quieres que los iconos de redes sociales 
-       no se vean muy alejados de los textos */
-    .footer-social {
-        margin: 0; /* Quita el margen que pusimos en móvil */
-        gap: 1.5rem; /* Espacio cómodo entre iconos */
+    .hero img {
+        height: 450px;
+        object-fit: cover;
     }
-}
-
-/* --- HOME PAGE LARGER (Desktop) --- */
-
-/* Reorganizamos la rejilla a 3 columnas */
-.home-grid {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-}
-
-/* El Hero ocupa las 3 columnas arriba */
-.hero {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-}
-
-.hero img {
-    height: 400px;
-}
-
-.hero-box {
-    position: absolute;
-    right: 5%;
-    width: 300px;
-    border-radius: 8px;
-}
-
-/* Eventos toma 2 columnas, Clima toma 1 */
-.events-card {
-    grid-column: 1 / 3;
-}
-
-#weather-card {
-    grid-column: 3 / 4;
-}
-
-/* Los Spotlights vuelven a ocupar todo el ancho en 3 columnas internas */
-.spotlight-container {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-
-/* --- RESPONSIVE: ESCRITORIO (.hero) --- */
-@media (min-width: 768px) {
-    /* ... otros estilos ... */
 
     .hero-box {
-        position: absolute;
-        top: 20px; /* Separación de arriba */
-        left: 20px; /* Separación de la izquierda */
-        transform: none; /* Quitamos el centrado */
-        width: 350px; /* Ancho fijo para el cuadro */
-        text-align: left; /* Alineado a la izquierda */
-        background: rgba(51, 92, 129, 0.9); /* Usando tu azul #335c81 con opacidad */
-        border-radius: 8px;
+        top: 20px;
+        left: 20px;
+        transform: none; /* Posicionado a la esquina superior izquierda */
+        width: 380px;
+        text-align: left;
+        background-color: rgba(51, 92, 129, 0.9);
+        padding: 30px;
+    }
+
+    .hero-box h1 {
+        font-size: 2rem;
+    }
+
+    /* Eventos toma 2 columnas (izquierda) */
+    .events-card {
+        grid-column: 1 / 3;
+    }
+
+    /* Clima toma 1 columna (derecha) */
+    #weather-card {
+        grid-column: 3 / 4;
+    }
+
+    /* Los Spotlights ocupan todo el ancho y se dividen en 3 columnas internas */
+    #spotlights {
+        grid-column: 1 / -1;
+    }
+
+    .spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* 4. DIRECTORIO (Si usas el mismo CSS para la página de miembros) */
+    #directory-cards.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* 5. FOOTER DESKTOP */
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto 1.5rem;
+        padding: 0 2rem;
+        text-align: left;
+    }
+
+    .footer-social {
+        margin: 0;
     }
 }
