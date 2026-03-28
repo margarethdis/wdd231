@@ -1,256 +1,100 @@
-/* 1. Configuraciones generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-/* 2. Header y Logo */
-header {
-    background-color: #000000;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.header-container img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-/* 3. Menú Hamburguesa (Botón) */
-#menu {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem;
-    display: block;
-}
-
-#menu span:nth-child(2) {
-    display: none;
-}
-
-#menu.open span:nth-child(1) {
-    display: none;
-}
-
-#menu.open span:nth-child(2) {
-    display: block;
-}
-
-/* 4. Navegación */
-nav {
-    width: 100%;
-}
-
-.navigation {
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    background-color: #335c81;
-}
-
-.navigation.open {
-    display: flex !important;
-}
-
-.navigation li a {
-    display: block;
-    padding: 1rem;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-}
-
-.navigation li a:hover,
-.navigation li a.active {
-    background-color: #1b2d45;
-}
-
-/* 5. Main Content */
-main {
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.directory-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.view-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.view-buttons button {
-    padding: 0.7rem 1.2rem;
-    cursor: pointer;
-    background-color: #274060;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-/* 6. Footer */
-footer {
-    background-color: #02050a;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.footer-top {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* AJUSTE DEL LOGO EN EL FOOTER */
-.footer-top img {
-    width: 80px; 
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-.footer-bottom {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-/* --- ESTILOS DEL DIRECTORIO --- */
-
-/* Estilo Grid (Cuadrícula) */
-#directory-cards.grid {
+/* --- HOME PAGE BASE (Mobile First) --- */
+.home-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 10px;
 }
 
-#directory-cards section {
+.hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.6; /* Un poco más oscuro para que el texto resalte más */
+}
+
+.hero-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 85%;
+    padding: 20px;
+    background-color: rgba(51, 92, 129, 0.8); /* El azul SPS con transparencia */
+    border-radius: 10px;
+}
+
+.hero-box h1 {
+    font-size: 1.5rem; /* Ajustado para pantallas pequeñas */
+    margin-bottom: 10px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* --- TARJETAS DE CLIMA Y EVENTOS --- */
+#weather-card, .events-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- SPOTLIGHTS (MIEMBROS) --- */
+.spotlight-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 1.5rem;
+}
+
+.spotlight-card {
     background-color: white;
     padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#directory-cards img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-#directory-cards h3 {
-    margin: 0.5rem 0;
-    color: #274060;
-}
-
-#directory-cards p {
-    font-size: 0.9rem;
-    margin: 0.2rem 0;
-}
-
-#directory-cards a {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #16488a;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Estilo Lista (Corregido para la Rúbrica) */
-#directory-cards.list {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-}
-
-#directory-cards.list section {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 0.8rem;
-    gap: 1.5rem;
-    background-color: #fff;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    box-shadow: none;
 }
 
-/* OCULTAR IMÁGENES EN LISTA (Requisito de la Rúbrica) */
-#directory-cards.list section img {
-    display: none;
+.spotlight-card img {
+    max-width: 150px;
+    max-height: 100px; /* Evita que logos muy altos deformen la tarjeta */
+    object-fit: contain;
+    margin: 10px 0;
 }
 
-#directory-cards.list section h3 {
-    width: 30%;
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-#directory-cards.list section p {
-    font-size: 0.9rem;
-    margin: 0;
-    width: 25%;
-}
-
-#directory-cards.list section a {
-    margin-top: 0;
-    margin-left: auto;
-}
-
-/* Ocultar nivel de membresía en lista para mayor limpieza */
-#directory-cards.list section p:last-of-type {
-    display: none;
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 25px; /* Espacio entre iconos */
-    margin: 1rem 0;
-}
-
-.footer-social img {
-    transition: transform 0.2s ease;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-}
-
-.footer-social img:hover {
-    transform: scale(1.15); /* Efecto pro al pasar el mouse */
-    filter: brightness(0.8);
-}
-
-/* Esto convierte la imagen a color en blanco y negro, y luego invierte el color negro a blanco */
-.invert-icon img {
-    filter: grayscale(100%) invert(100%) brightness(200%);
+.level-tag {
+    color: #335c81;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

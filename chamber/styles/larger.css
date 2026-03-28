@@ -62,3 +62,61 @@
         gap: 1.5rem; /* Espacio cómodo entre iconos */
     }
 }
+
+/* --- HOME PAGE LARGER (Desktop) --- */
+
+/* Reorganizamos la rejilla a 3 columnas */
+.home-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+}
+
+/* El Hero ocupa las 3 columnas arriba */
+.hero {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+}
+
+.hero img {
+    height: 400px;
+}
+
+.hero-box {
+    position: absolute;
+    right: 5%;
+    width: 300px;
+    border-radius: 8px;
+}
+
+/* Eventos toma 2 columnas, Clima toma 1 */
+.events-card {
+    grid-column: 1 / 3;
+}
+
+#weather-card {
+    grid-column: 3 / 4;
+}
+
+/* Los Spotlights vuelven a ocupar todo el ancho en 3 columnas internas */
+.spotlight-container {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* --- RESPONSIVE: ESCRITORIO (.hero) --- */
+@media (min-width: 768px) {
+    /* ... otros estilos ... */
+
+    .hero-box {
+        position: absolute;
+        top: 20px; /* Separación de arriba */
+        left: 20px; /* Separación de la izquierda */
+        transform: none; /* Quitamos el centrado */
+        width: 350px; /* Ancho fijo para el cuadro */
+        text-align: left; /* Alineado a la izquierda */
+        background: rgba(51, 92, 129, 0.9); /* Usando tu azul #335c81 con opacidad */
+        border-radius: 8px;
+    }
+}
