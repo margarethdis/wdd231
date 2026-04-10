@@ -3,75 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us - SPS Chamber of Commerce</title>
-    <meta name="description" content="Membership application for the Chamber of Commerce of San Pedro Sula.">
-    <link rel="stylesheet" href="styles/base.css"> 
-    <link rel="stylesheet" href="styles/join.css">
-    <script src="js/main.js" defer></script> <script src="js/join.js" defer></script>
-</head>
+    <title>Thank You - SPS Chamber of Commerce</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css"> </head>
+
 <body>
     <header>
         <div class="header-container">
-            <img src="images/cham_logo.png" alt="SPS Chamber Logo">
+            <img src="images/logo.webp" alt="Chamber Logo" id="logo">
             <div class="header-text">
-                <h1>SPS Chamber of Commerce</h1>
+                <h1>Chamber of Commerce</h1>
+                <p>San Pedro Sula Business Portal</p>
             </div>
         </div>
-        <button id="menu">
+        
+        <button id="menu" title="Menu">
             <span>&#9776;</span>
             <span>&times;</span>
         </button>
+
         <nav>
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-    <section class="form-section">
-        <h2>Thank You for Registering!</h2>
-        <p>We have received your application. Here is the summary:</p>
-        <div id="display-results" style="margin-top: 20px; line-height: 2;"></div>
-        <a href="index.html" class="cta-btn">Back to Home</a>
-    </section>
-</main>
+        <div class="thankyou-container">
+            <section class="form-section" style="text-align: center; margin: 2rem auto; max-width: 700px;">
+                <h2 style="color: #335c81;">¡Application Received!</h2>
+                <p>Thank you for your interest in joining the Chamber of Commerce of San Pedro Sula. We have received the following details:</p>
+                
+                <div id="results" style="text-align: left; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; line-height: 2; border-left: 5px solid #ffcc00;">
+                    </div>
 
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const display = document.getElementById('display-results');
-    
-    // Campos requeridos para mostrar
-    const show = ['fname', 'lname', 'email', 'phone', 'organization', 'timestamp'];
-    
-    show.forEach(key => {
-        if(urlParams.has(key)) {
-            const val = decodeURIComponent(urlParams.get(key)).replace(/\+/g, ' ');
-            display.innerHTML += `<p><strong>${key.replace('fname','First Name').replace('lname','Last Name')}:</strong> ${val}</p>`;
-        }
-    });
-</script>
-
-    <dialog id="modal-np">
-        <h3>Non-Profit Benefits</h3>
-        <ul>
-            <li>$0 Annual Fee</li>
-            <li>Basic Directory Listing</li>
-            <li>Community Events Access</li>
-        </ul>
-        <button onclick="this.closest('dialog').close()">Close</button>
-    </dialog>
-    <footer>
-        <div class="footer-top">
-            <img src="images/logo.png" alt="SPS Logo">
-            <p>San Pedro Sula, Honduras</p>
+                <p>Our team will contact you shortly to complete your membership.</p>
+                <a href="index.html" class="cta-btn" style="margin-top: 1rem;">Return to Home</a>
+            </section>
         </div>
+    </main>
+
+    <footer>
         <div class="footer-bottom">
-            <p>&copy; 2026 | Margareth Ramos | WDD 231</p>
+            <p>WDD231 Class Project | Margareth Ramos</p>
+            <p>&copy; 2026 | Timbuktu Chamber of Commerce</p>
         </div>
     </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script>
+        // SCRIPT PARA MOSTRAR LOS DATOS DE LA URL
+        const currentUrl = window.location.href;
+        const everything = currentUrl.split('?');
+
+        if (everything.length > 1) {
+            const formData = everything[1].split('&');
+            const resultsElement = document.getElementById('results');
+
+            function show(cup) {
+                formData.forEach((element) => {
+                    if (element.startsWith(cup)) {
+                        let result = element.split('=')[1]
+                            .replace(/\+/g, ' ')
+                            .replace('%40', '@'); // Limpia el email y espacios
+                        
+                        // Crea un párrafo para cada dato
+                        const p = document.createElement('p');
+                        p.innerHTML = `<strong>${cup.charAt(0).toUpperCase() + cup.slice(1)}:</strong> ${decodeURIComponent(result)}`;
+                        resultsElement.appendChild(p);
+                    }
+                });
+            }
+
+            // Lista de campos que queremos mostrar (deben coincidir con el 'name' de tus inputs)
+            show('fname');
+            show('lname');
+            show('email');
+            show('phone');
+            show('organization');
+            show('timestamp');
+        }
+    </script>
 </body>
 </html>
-
