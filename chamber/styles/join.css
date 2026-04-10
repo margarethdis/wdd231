@@ -1,42 +1,47 @@
-/* Layout Principal */
+/* --- 1. CONFIGURACIONES GENERALES --- */
 .join-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Móvil: Una sola columna */
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Estilo del Formulario */
+/* --- 2. ESTILO DEL FORMULARIO --- */
 .form-section {
     background: white;
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .form-section h2 {
-    color: #335c81; /* Tu azul */
-    border-bottom: 2px solid #ffcc00; /* Tu amarillo */
+    color: #335c81; /* Azul SPS */
+    border-bottom: 2px solid #ffcc00; /* Amarillo SPS */
     padding-bottom: 10px;
     margin-bottom: 1.5rem;
 }
 
 form label {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     font-weight: bold;
+    color: #444;
 }
 
 form input, form select, form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     display: block;
+    font-family: inherit;
 }
 
-/* Botón consistente con .cta-btn de index */
+/* Botón de envío */
 .submit-btn {
     background-color: #ffcc00;
     color: black;
@@ -46,16 +51,20 @@ form input, form select, form textarea {
     cursor: pointer;
     width: 100%;
     transition: 0.3s;
+    font-size: 1.1rem;
+    border-radius: 5px;
 }
 
 .submit-btn:hover {
     background-color: #d4aa00;
+    transform: translateY(-2px);
 }
 
-/* Tarjetas y Animación */
+/* --- 3. TARJETAS DE MEMBRESÍA --- */
 .membership-cards {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 1.5rem;
 }
 
 .card {
@@ -64,7 +73,9 @@ form input, form select, form textarea {
     border-radius: 8px;
     border: 1px solid #ddd;
     text-align: center;
-    /* Animación de entrada */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    
+    /* Animación inicial */
     opacity: 0;
     transform: translateY(20px);
     animation: slideUp 0.6s forwards;
@@ -75,23 +86,56 @@ form input, form select, form textarea {
 }
 
 /* Escalonado de tiempo */
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(1) { animation-delay: 0.2s; border-top: 5px solid #ccc; }
+.card:nth-child(2) { animation-delay: 0.4s; border-top: 5px solid #cd7f32; }
+.card:nth-child(3) { animation-delay: 0.6s; border-top: 5px solid #c0c0c0; }
+.card:nth-child(4) { animation-delay: 0.8s; border-top: 5px solid #ffd700; }
+
+.card h3 { color: #335c81; margin-bottom: 1rem; }
 
 .card button {
     background: #335c81;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Vista Desktop */
-@media (min-width: 800px) {
+.card button:hover { background: #1b2d45; }
+
+/* --- 4. MODALES (Dialog) --- */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 90%;
+    width: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+
+/* --- 5. VISTA DE ESCRITORIO (Desktop) --- */
+@media (min-width: 900px) {
     .join-grid {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.5fr 1fr; /* Distribución equilibrada */
+        gap: 3rem;
+        align-items: start;
+        padding: 2rem;
+    }
+
+    .membership-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: sticky;
+        top: 2rem; /* Se queda fijo mientras haces scroll en el formulario */
+    }
+
+    .form-section {
+        /* Evita que el formulario se estire infinitamente */
+        max-width: 100%; 
     }
 }
