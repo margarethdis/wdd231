@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover San Pedro Sula - Margareth Ramos</title>
+    <meta name="description" content="Explore the beauty, history, and landmarks of San Pedro Sula, Honduras.">
+    <meta name="author" content="Margareth Ramos">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css"> 
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Discover San Pedro Sula - Chamber of Commerce">
+    <meta property="og:description" content="Check out the best spots to visit in the industrial capital of Honduras.">
+    <meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/chamber-og.jpg">
+    <meta property="og:url" content="https://margarethdis.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.webp" alt="Chamber Logo" id="logo">
+            <div class="header-text">
+                <h1>Chamber of Commerce</h1>
+                <p>San Pedro Sula Business Portal</p>
+            </div>
+        </div>
+        <button id="menu" title="Menu">
+            <span>&#9776;</span>
+            <span>&times;</span>
+        </button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="visitor-message" class="visitor-msg-area"></div>
+
+        <section class="discover-hero">
+            <h1>Experience San Pedro Sula</h1>
+            <p>Explore the vibrant culture and landmarks of our city.</p>
+        </section>
+
+        <div class="discover-grid">
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <img src="images/logo.webp" alt="Chamber Logo small">
+            
+            <div class="footer-contact">
+                <p><strong>Chamber of Commerce</strong></p>
+                <p>123 Business Way, SPS, Honduras</p>
+                <p>info@chamber.org | +(504) 9988-7766</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" title="Facebook">
+                    <img src="https://cdn.simpleicons.org/facebook/white" alt="Facebook icon" width="24" height="24">
+                </a>
+                <a href="https://instagram.com" target="_blank" title="Instagram">
+                    <img src="https://cdn.simpleicons.org/instagram/white" alt="Instagram icon" width="24" height="24">
+                </a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="invert-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn icon" width="24" height="24">
+                </a>
+            </div>
+        </div> 
+        <div class="footer-bottom">
+            <p>WDD231 Class Project | Margareth Ramos</p>
+            <p>&copy; <span id="currentyear"></span> San Pedro Sula Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
+</body>
+
+</html>

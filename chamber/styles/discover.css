@@ -1,0 +1,67 @@
+/* Banner de Mensaje */
+.visitor-msg-area {
+    background-color: #f0f7ff;
+    border: 1px solid #005a9c;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Grid Principal */
+.discover-grid {
+    display: grid;
+    gap: 20px;
+    padding: 1rem;
+    /* Móvil: 1 columna */
+    grid-template-areas:
+        "card1" "card2" "card3" "card4"
+        "card5" "card6" "card7" "card8";
+}
+
+/* Estilo de Tarjetas */
+.item-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.item-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* Hover solo para PC */
+@media (min-width: 1025px) {
+    .item-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+    
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
