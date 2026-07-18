@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 – Web Frontend Development I – Margareth Daniela Ramos Discua</title>
+    
+    <meta name="description" content="Course home page for Margareth Daniela Ramos Discua in WDD 231. Features frontend web development assignments, layouts, and JavaScript practices.">    
+    <meta name="author" content="Margareth Daniela Ramos Discua">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-placeholder" style="display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="color: #ffffff;">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <span id="site-name">WDD 231: Web Frontend Development I</span>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+        <nav id="nav-menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Chamber Project</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="main-title">Home</h1>
+
+        <div class="grid-container">
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <p>I am a web development student with a diverse background in instruction and communication. I love combining my analytical skills in frontend programming with my creative side—whether I'm sketching out ideas, editing digital content, or learning new languages. I strive to create dynamic websites that are both functional and visually engaging.</p>
+                </div>
+            </section>
+
+            <section class="card photo-card">
+                <h2>Student Photo</h2>
+                <div class="card-content photo-container">
+                    <img src="images/profile.png" alt="Profile Image of Margareth Daniela Ramos" width="200" height="200" loading="lazy">
+                </div>
+            </section>
+
+            <section class="card courses-card">
+                <h2>Web Certificate Courses</h2>
+                <div class="card-content">
+                    <div class="course-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="cse">CSE</button>
+                        <button class="filter-btn" data-filter="wdd">WDD</button>
+                    </div>
+                    
+                    <div class="courses-container" id="courses-wrapper"></div>
+                    
+                    <p class="credits-text">The total credits for course listed above is <span id="total-credits">0</span></p>
+                </div>
+            </section>
+        </div> 
+
+        <div class="social-media">
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
+            </a>
+            <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
+                <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener">
+                <img src="images/x-icon.svg" alt="X Twitter social profile icon" class="social-icon">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> • Margareth Daniela Ramos Discua • Honduras, USA</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
