@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Directorio de Miembros | San Pedro Sula Chamber of Commerce</title>
+  <meta name="description" content="Directorio de empresas miembro de la San Pedro Sula Chamber of Commerce, con informacion de contacto y nivel de membresia.">
+  <meta name="author" content="Margareth Daniela Ramos Discua">
+
+  <!-- Facebook Open Graph meta tags -->
+  <meta property="og:title" content="Directorio de Miembros | San Pedro Sula Chamber of Commerce">
+  <meta property="og:description" content="Directorio de empresas miembro de la San Pedro Sula Chamber of Commerce, con informacion de contacto y nivel de membresia.">
+  <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/favicon.svg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo: normalize primero, luego small, luego larger -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__brand">
+      <!-- Logo temporal: se reemplazara mas adelante -->
+      <img src="images/favicon.svg" alt="Logo de San Pedro Sula Chamber of Commerce" class="site-header__logo">
+      <p class="site-header__title">San Pedro Sula<br>Chamber of Commerce</p>
+    </div>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegacion">
+      &#9776;
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="directory.html" aria-current="page">Directorio</a>
+      <a href="join.html">Unirse</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="directory-intro">
+      <h1>Directorio de Miembros</h1>
+      <p>Conoce las empresas afiliadas a la San Pedro Sula Chamber of Commerce.</p>
+    </div>
+
+    <div class="directory-controls">
+      <button id="grid-view-btn" class="view-btn is-active" aria-label="Ver como tarjetas">&#9638;</button>
+      <button id="list-view-btn" class="view-btn" aria-label="Ver como lista">&#9776;</button>
+    </div>
+
+    <section id="member-list" class="member-list">
+      <!-- Las tarjetas de los miembros se generan dinamicamente con directory.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>San Pedro Sula Chamber of Commerce</h2>
+        <p>Barrio Guamilito, San Pedro Sula, Cortés, Honduras</p>
+        <p>Tel: +504 2550-0000</p>
+        <p>Email: info@spschamber.hn</p>
+        <div class="site-footer__social">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">&#9679;</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">&#9679;</a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Desarrollo</h2>
+        <p>Margareth Daniela Ramos Discua</p>
+        <p>WDD 231</p>
+        <p>Ultima modificacion: <span id="last-modified"></span></p>
+      </div>
+    </div>
+
+    <p class="site-footer__legal">&copy; <span id="current-year"></span> San Pedro Sula Chamber of Commerce. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

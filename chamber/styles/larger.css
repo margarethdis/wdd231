@@ -1,0 +1,69 @@
+/* =========================================================
+   larger.css
+   Sobreescribe/ajusta small.css para pantallas mas anchas
+   ========================================================= */
+
+@media screen and (min-width: 700px) {
+  .site-header {
+    padding: 1rem 2rem;
+  }
+
+  .site-header__title {
+    font-size: 1.15rem;
+  }
+
+  /* En pantallas grandes ya no se necesita el boton hamburguesa */
+  .nav-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .main-nav a {
+    color: var(--color-primary);
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+  }
+
+  .main-nav a:hover,
+  .main-nav a:focus,
+  .main-nav a[aria-current="page"] {
+    background-color: transparent;
+    color: var(--color-accent-dark);
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .directory-intro h1 {
+    font-size: 2rem;
+  }
+
+  .member-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .member-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .site-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .site-footer__inner > div {
+    flex: 1;
+  }
+}

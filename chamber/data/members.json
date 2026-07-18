@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "Panadería Doña Luz",
+      "address": "Barrio Río de Piedras, 3ra Calle, San Pedro Sula, Cortés",
+      "phone": "+504 2550-1234",
+      "website": "https://example.com/panaderia-dona-luz",
+      "image": "panaderia.jpg",
+      "membershipLevel": 1,
+      "category": "Panadería y repostería",
+      "founded": 2010,
+      "description": "Panadería familiar conocida por su pan de coco y semitas."
+    },
+    {
+      "name": "Ferretería El Constructor",
+      "address": "Bulevar del Sur, contiguo a Mall Multiplaza, San Pedro Sula, Cortés",
+      "phone": "+504 2556-4589",
+      "website": "https://example.com/ferreteria-el-constructor",
+      "image": "ferreteria.jpg",
+      "membershipLevel": 3,
+      "category": "Materiales de construcción",
+      "founded": 1998,
+      "description": "Distribuidor mayorista y minorista de materiales de construcción."
+    },
+    {
+      "name": "Clínica Dental Sonrisas SPS",
+      "address": "Colonia Trejo, 4ta Avenida, San Pedro Sula, Cortés",
+      "phone": "+504 2552-7890",
+      "website": "https://example.com/clinica-sonrisas-sps",
+      "image": "clinica-dental.jpg",
+      "membershipLevel": 2,
+      "category": "Salud dental",
+      "founded": 2015,
+      "description": "Servicios de odontología general y estética dental."
+    },
+    {
+      "name": "Farmacia San Pedro",
+      "address": "Barrio Guamilito, Avenida Circunvalación, San Pedro Sula, Cortés",
+      "phone": "+504 2557-3321",
+      "website": "https://example.com/farmacia-san-pedro",
+      "image": "farmacia.jpg",
+      "membershipLevel": 1,
+      "category": "Farmacia",
+      "founded": 2005,
+      "description": "Farmacia con servicio a domicilio y atención las 24 horas."
+    },
+    {
+      "name": "Boutique Estilo Catracho",
+      "address": "Plaza Sula, Local 12, San Pedro Sula, Cortés",
+      "phone": "+504 2553-6644",
+      "website": "https://example.com/estilo-catracho",
+      "image": "boutique.jpg",
+      "membershipLevel": 2,
+      "category": "Ropa y accesorios",
+      "founded": 2018,
+      "description": "Moda hondureña con diseños de artesanos locales."
+    },
+    {
+      "name": "TecnoSoluciones SPS",
+      "address": "Colonia Los Andes, 6ta Calle, San Pedro Sula, Cortés",
+      "phone": "+504 2558-9012",
+      "website": "https://example.com/tecnosoluciones-sps",
+      "image": "tecnologia.jpg",
+      "membershipLevel": 3,
+      "category": "Tecnología y reparación de equipos",
+      "founded": 2012,
+      "description": "Venta y reparación de computadoras, redes y soporte técnico empresarial."
+    },
+    {
+      "name": "Hotel Real Sula",
+      "address": "Avenida Circunvalación Sur, San Pedro Sula, Cortés",
+      "phone": "+504 2560-2211",
+      "website": "https://example.com/hotel-real-sula",
+      "image": "hotel.jpg",
+      "membershipLevel": 3,
+      "category": "Hotelería y turismo",
+      "founded": 2001,
+      "description": "Hotel de negocios con salones para eventos y conferencias."
+    },
+    {
+      "name": "Café Central SPS",
+      "address": "Parque Central, San Pedro Sula, Cortés",
+      "phone": "+504 2551-4477",
+      "website": "https://example.com/cafe-central-sps",
+      "image": "cafeteria.jpg",
+      "membershipLevel": 1,
+      "category": "Cafetería",
+      "founded": 2019,
+      "description": "Café de especialidad hondureño en el corazón de la ciudad."
+    }
+  ]
+}
