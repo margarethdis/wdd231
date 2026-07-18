@@ -1,49 +1,55 @@
 /* ==========================================
-   ESTILOS ESPECÍFICOS PARA ESCRITORIO
+   ESTILOS FORZADOS PARA PANTALLAS GRANDES
    ========================================== */
+@media (min-width: 768px) {
+    
+    /* Ocultar menú hamburguesa y expandir navbar */
+    #menu-toggle {
+        display: none !important; 
+    }
 
-#menu-toggle {
-    display: none; /* Se esconde el botón hamburguesa */
-}
+    nav {
+        display: flex !important; 
+        flex-direction: row !important;
+        justify-content: space-around;
+        background-color: #333333;
+    }
 
-nav {
-    display: flex; /* El menú vuelve a ser una fila horizontal */
-    flex-direction: row;
-    justify-content: center;
-}
+    nav a {
+        border-bottom: none;
+        flex: 1;
+        padding: 14px 0;
+    }
 
-nav a {
-    border-bottom: none;
-    padding: 14px 25px;
-}
+    /* Formato del Título */
+    .main-title {
+        text-align: center;
+        margin: 30px auto;
+    }
 
-.main-title {
-    max-width: 1100px;
-    text-align: left;
-    font-size: 2.2rem;
-}
+    /* ENFOQUE DEL MODELO: 2 Columnas fijas (Ancha a la izquierda, angosta a la derecha) */
+    .grid-container {
+        display: grid !important;
+        grid-template-columns: 2fr 1fr !important; /* Proporción exacta de la foto de muestra */
+        gap: 30px !important;
+        padding: 0 20px;
+    }
 
-/* Activa la cuadrícula del wireframe */
-.grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+    /* Estructura interna de la tarjeta About Me (Texto y Foto de lado a lado) */
+    .about-card .card-content {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
 
-.courses-card {
-    grid-column: 1 / -1; /* Ocupa todo el ancho inferior */
-}
+    /* Mover la foto a la derecha del texto en pantallas grandes */
+    .photo-card {
+        display: none; /* Ocultamos la tarjeta vacía si la foto se renderiza adentro */
+    }
 
-/* Las medallas de cursos se organizan en bloques paralelos */
-.courses-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.filter-btn {
-    padding: 12px;
-    font-size: 1rem;
+    .photo-container img {
+        margin: 0;
+        width: 150px;
+        height: auto;
+    }
 }
