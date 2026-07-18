@@ -4,7 +4,7 @@ const courses = [
     { subject: 'CSE', number: 111, title: 'Programming with Functions', credits: 2, certificate: 'Web and Computer Programming', description: '...', completed: true },
     { subject: 'CSE', number: 210, title: 'Programming with Classes', credits: 2, certificate: 'Web and Computer Programming', description: '...', completed: true },
     { subject: 'WDD', number: 131, title: 'Web Frontend Development I', credits: 2, certificate: 'Web and Computer Programming', description: '...', completed: true },
-    { subject: 'WDD', number: 231, title: 'Web Frontend Development II', credits: 3, certificate: 'Web and Computer Programming', description: '...', completed: false }
+    { subject: 'WDD', number: 231, title: 'Web Frontend Development II', credits: 2, certificate: 'Web and Computer Programming', description: '...', completed: false }
 ];
 
 const wrapper = document.getElementById('courses-wrapper');
