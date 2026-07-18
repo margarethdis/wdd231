@@ -9,18 +9,23 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #ffffff; 
+    background-color: #eaedf1; /* Fondo gris/azul tenue original */
     color: #333333;
 }
 
+header, main {
+    display: block;
+    width: 100%;
+}
+
 /* ==========================================
-   2. HEADER Y NAVEGACIÓN (Navbar)
+   2. HEADER Y NAVEGACIÓN INTERACTIVA (Móvil)
    ========================================== */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2f547c; 
+    background-color: #2f547c; /* Azul intermedio del header */
     padding: 15px;
     color: #ffffff;
 }
@@ -43,7 +48,7 @@ body {
 }
 
 #menu-toggle {
-    display: block;
+    display: block; /* Visible por defecto en móviles */
     background: none;
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -53,14 +58,14 @@ body {
 }
 
 nav {
-    display: none;
+    display: none; /* Oculto inicialmente en móviles */
     flex-direction: column;
     width: 100%;
-    background-color: #333333; 
+    background-color: #333333; /* Menú gris oscuro */
 }
 
 nav.show {
-    display: flex; 
+    display: flex; /* Desplegado por JS */
 }
 
 nav a {
@@ -74,66 +79,132 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    color: #ffffff;            
-    background-color: #1b4d79; 
+    color: #ffffff;            /* Corregido a blanco puro para máxima accesibilidad y contraste */
+    background-color: #1b4d79; /* Resalta con tu color azul base */
 }
 
 /* ==========================================
-   3. DISPOSICIÓN MÓVIL (Estructura Vertical)
+   3. DISPOSICIÓN EN DISPOSITIVOS MÓVILES (Single Column)
    ========================================== */
 .main-title {
     margin: 25px auto 15px auto;
+    padding: 0 20px;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: #1a1a1a;
 }
 
 .grid-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apilado vertical ideal para teléfonos */
     gap: 20px;
     padding: 0 15px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* ==========================================
-   4. ESTILO DE LAS TARJETAS (Cards)
+   4. TARJETAS (Cards Estilo Impecable)
    ========================================== */
 .card {
-    background-color: #ffffff; 
-    border: 1px solid #b0c4de; 
-    border-radius: 8px;        
+    background-color: #ffffff; /* Tarjetas blancas limpias */
+    border: 1px solid #cdd5df; /* Borde sutil original */
+    border-radius: 10px;        /* Esquinas redondeadas originales */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
     overflow: hidden;
 }
 
 .card h2 {
-    background-color: #1b4d79; 
+    background-color: #1b4d79; /* Azul oscuro característico */
     color: #ffffff;
     text-align: center;
     padding: 12px 0;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .card-content {
     padding: 20px;
 }
 
-/* Foto de estudiante dentro del contenido en móvil */
+.about-card p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .photo-container img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 15px auto;
+    border: 1px solid #cccccc;
 }
 
-/* Redes Sociales */
+/* ==========================================
+   5. SECCIÓN DE CURSOS Y FILTROS
+   ========================================== */
+.course-filters {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 10px 5px;
+    background-color: #eaedf1;
+    border: 1px solid #cdd5df;
+    color: #1b4d79;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter-btn.active {
+    background-color: #21409a; /* Azul brillante de énfasis */
+    color: #ffffff;
+    border-color: #21409a;
+}
+
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.course-badge {
+    background-color: #f4f6f9;
+    border: 1px solid #cdd5df;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+    border-radius: 6px;
+}
+
+.course-badge.wdd { border-left: 5px solid #21409a; }
+.course-badge.cse { border-left: 5px solid #1b4d79; }
+
+.credits-text {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #1b4d79;
+}
+
+/* ==========================================
+   6. REDES SOCIALES Y FOOTER
+   ========================================== */
 .social-media {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin: 30px 0;
+    margin: 30px 0 20px 0;
 }
 
 .social-icon {
@@ -141,13 +212,12 @@ nav a:hover, nav a.active {
     height: 32px;
 }
 
-/* Footer */
 footer {
-    background-color: #1b4d79; 
+    background-color: #1b4d79; /* Azul oscuro corporativo de tu footer */
     color: #ffffff;
     text-align: center;
     padding: 25px;
     margin-top: 35px;
     font-size: 0.9rem;
-    line-height: 1.8;
+    line-height: 1.9;
 }
