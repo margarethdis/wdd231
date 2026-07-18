@@ -15,14 +15,17 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
     
-    <script src="scripts/getdates.js" defer></script>
+    <!-- Scripts requeridos con método defer -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <div class="logo-placeholder" style="display: flex; align-items: center; justify-content: center;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="color: #ffffff;">
+                <div class="logo-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
                         <polyline points="16 18 22 12 16 6"></polyline>
                         <polyline points="8 6 2 12 8 18"></polyline>
                     </svg>
@@ -33,10 +36,8 @@
         </div>
         <nav id="nav-menu">
             <a href="#" class="active">Home</a>
-            <a href="#">Chamber Project</a>
-            <a href="#">Final Project</a>
-            <a href="#">congrats</a>
-
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
         </nav>
     </header>
 
@@ -88,7 +89,7 @@
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> • Margareth Daniela Ramos Discua • Honduras, USA</p>
+        <p>&copy;<span id="currentyear"></span> • Margareth Daniela Ramos Discua • Honduras</p>
         <p id="lastModified"></p>
     </footer>
 </body>
