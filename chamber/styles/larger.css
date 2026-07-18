@@ -1,6 +1,6 @@
 /* =========================================================
    larger.css
-   Sobreescribe/ajusta small.css para pantallas mas anchas
+   Overrides/adjusts small.css for wider screens
    ========================================================= */
 
 @media screen and (min-width: 700px) {
@@ -12,7 +12,7 @@
     font-size: 1.15rem;
   }
 
-  /* En pantallas grandes ya no se necesita el boton hamburguesa */
+  /* Hamburger button is no longer needed on large screens */
   .nav-toggle {
     display: none;
   }

@@ -1,17 +1,55 @@
 /* =========================================================
+   Modern CSS Reset
+   Clears default browser styles for uniform rendering
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================================
    small.css
-   Estilos base "mobile-first" para el sitio de la Camara
+   Base "mobile-first" styles for the Chamber site
    San Pedro Sula Chamber of Commerce
-   Se aplican desde 320px en adelante. larger.css sobreescribe
-   estas reglas para pantallas mas grandes con media queries.
+   Applied from 320px and up. larger.css overrides
+   these rules for larger screens using media queries.
    ========================================================= */
 
 :root {
-  /* Paleta de colores: azul y dorado (estilo civico/profesional) */
-  --color-primary: #0d3b66;      /* azul principal */
-  --color-primary-dark: #082744; /* azul oscuro para hover/footer */
-  --color-accent: #e0a72e;       /* dorado de acento */
-  --color-accent-dark: #b3820f;  /* dorado oscuro */
+  /* Color palette: blue and gold (civic/professional style) */
+  --color-primary: #0d3b66;      /* primary blue */
+  --color-primary-dark: #082744; /* dark blue for hover/footer */
+  --color-accent: #e0a72e;       /* accent gold */
+  --color-accent-dark: #b3820f;  /* dark gold */
   --color-bg: #f7f7f5;
   --color-card-bg: #ffffff;
   --color-text: #1a1a1a;
@@ -36,7 +74,7 @@ h3 {
   color: var(--color-primary);
 }
 
-/* ---------- Encabezado ---------- */
+/* ---------- Header ---------- */
 .site-header {
   display: flex;
   align-items: center;
@@ -64,15 +102,18 @@ h3 {
   line-height: 1.1;
 }
 
-/* Boton hamburguesa (solo visible en movil) */
+/* Hamburger button (only visible on mobile) */
 .nav-toggle {
   font-size: 1.75rem;
   line-height: 1;
   color: var(--color-primary);
   padding: 0.25rem 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Navegacion principal: oculta por defecto en movil */
+/* Main navigation: hidden by default on mobile */
 .main-nav {
   position: absolute;
   top: 100%;
@@ -102,7 +143,7 @@ h3 {
   color: var(--color-primary-dark);
 }
 
-/* ---------- Contenido principal ---------- */
+/* ---------- Main Content ---------- */
 main {
   padding: 1rem;
   max-width: 1100px;
@@ -135,6 +176,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .view-btn.is-active {
@@ -143,7 +185,7 @@ main {
   border-color: var(--color-primary);
 }
 
-/* ---------- Tarjetas de miembros ---------- */
+/* ---------- Member Cards ---------- */
 .member-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -255,10 +297,28 @@ main {
   color: #d7d7d7;
 }
 
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
 .site-footer__social a {
-  display: inline-block;
-  margin-right: 0.6rem;
-  font-size: 1.2rem;
+  display: inline-flex;
+}
+
+/* Styles for SVG icons inside footer links */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(93%) sepia(0%) saturate(1210%) hue-rotate(177deg) brightness(107%) contrast(92%);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: invert(73%) sepia(74%) saturate(464%) hue-rotate(342deg) brightness(92%) contrast(88%);
 }
 
 .site-footer__legal {
@@ -266,9 +326,10 @@ main {
   padding-top: 0.75rem;
   font-size: 0.78rem;
   color: #b8b8b8;
+  margin-top: 1rem;
 }
 
-/* Utilidad para elementos accesibles pero visualmente ocultos */
+/* Utility for accessible but visually hidden elements */
 .visually-hidden {
   position: absolute;
   width: 1px;
