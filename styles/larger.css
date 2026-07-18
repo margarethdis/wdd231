@@ -1,20 +1,29 @@
+/* ==========================================
+   ESTILOS ESPECÍFICOS PARA PANTALLAS GRANDES (>= 650px)
+   ========================================== */
+
+/* 1. Desaparecer botón hamburguesa */
 #menu-toggle {
-    display: none; 
+    display: none !important; 
 }
 
+/* 2. Menú horizontal estilo barra negra */
 nav {
     display: flex !important; 
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
     background-color: #222222;
     padding-left: 20px;
+    width: 100%;
 }
 
 nav a {
     border-bottom: none;
     padding: 12px 25px;
+    text-align: left;
 }
 
+/* 3. Título de la página alineado */
 .main-title {
     max-width: 1100px;
     text-align: left;
@@ -22,21 +31,24 @@ nav a {
     padding-left: 15px;
 }
 
+/* 4. Grid de dos columnas asimétricas según wireframe */
 .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important; 
     gap: 20px;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
+/* 5. Forzar la sección completa de cursos al fondo ocupando ambos lados */
 .courses-card {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1 !important; 
 }
 
+/* 6. Distribución de los bloques de cursos en paralelo */
 .courses-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
     gap: 15px;
 }

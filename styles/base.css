@@ -1,3 +1,6 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL / RESETS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +18,9 @@ header, main {
     width: 100%;
 }
 
+/* ==========================================
+   HEADER Y NAVEGACIÓN INTERACTIVA (Móvil)
+   ========================================== */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -44,7 +50,7 @@ header, main {
 }
 
 #site-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -73,9 +79,9 @@ nav.show {
 nav a {
     color: #ffffff;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 14px 20px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     border-bottom: 1px solid #333333;
     transition: background 0.2s;
@@ -85,6 +91,9 @@ nav a:hover, nav a.active {
     background-color: #1b4d79;
 }
 
+/* ==========================================
+   DISPOSICIÓN MÓVIL (Columna Única por Defecto)
+   ========================================== */
 .main-title {
     margin: 20px auto;
     text-align: center;
@@ -99,6 +108,9 @@ nav a:hover, nav a.active {
     padding: 0 15px;
 }
 
+/* ==========================================
+   TARJETAS (Cards)
+   ========================================== */
 .card {
     background-color: #ffffff;
     border: 1px solid #cdd5df;
@@ -136,6 +148,9 @@ nav a:hover, nav a.active {
     border-radius: 4px;
 }
 
+/* ==========================================
+   SECCIÓN DE CURSOS Y FILTROS
+   ========================================== */
 .course-filters {
     display: flex;
     gap: 8px;
@@ -175,7 +190,7 @@ nav a:hover, nav a.active {
     color: #333333;
 }
 
-/* Estilo distintivo para cursos completados */
+/* Estilo para destacar cursos completados */
 .course-badge.completed {
     background-color: #ffe0b2;
     border-color: #b13c2e;
@@ -188,10 +203,13 @@ nav a:hover, nav a.active {
     margin-top: 15px;
 }
 
+/* ==========================================
+   FOOTER Y REDES
+   ========================================== */
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin: 25px 0;
 }
 
