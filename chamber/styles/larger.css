@@ -31,11 +31,12 @@
     font-weight: 600;
   }
 
+  /* CORREGIDO: Se cambia var(--color-accent-dark) por un tono accesible sobre fondo blanco/transparente */
   .main-nav a:hover,
   .main-nav a:focus,
   .main-nav a[aria-current="page"] {
     background-color: transparent;
-    color: var(--color-accent-dark);
+    color: #91680d; 
   }
 
   main {
