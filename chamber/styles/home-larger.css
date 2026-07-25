@@ -1,0 +1,34 @@
+/* ===================================================
+   HOME PAGE - Desktop Styles (Min-width: 800px)
+   =================================================== */
+
+@media (min-width: 800px) {
+  /* Cambio a layout de dos columnas */
+  .home-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* El Hero ocupa el ancho completo superior */
+  .hero {
+    grid-column: 1 / 3;
+  }
+
+  /* Los Spotlights ocupan el ancho completo inferior */
+  .spotlights-card {
+    grid-column: 1 / 3;
+  }
+
+  /* Muestra las 3 tarjetas de Spotlights en fila */
+  .spotlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Ajuste de tipografía para escritorio */
+  .hero-cta h1 {
+    font-size: 2rem;
+  }
+
+  .hero-cta p {
+    font-size: 1.1rem;
+  }
+}

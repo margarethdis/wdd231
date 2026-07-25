@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Home | San Pedro Sula Chamber of Commerce</title>
+  <meta name="description" content="Official home page of the San Pedro Sula Chamber of Commerce. Connecting local businesses, events, and community growth in Honduras.">
+  <meta name="author" content="Margareth Daniela Ramos Discua">
+
+  <meta property="og:title" content="Home | San Pedro Sula Chamber of Commerce">
+  <meta property="og:description" content="Official home page of the San Pedro Sula Chamber of Commerce. Connecting local businesses, events, and community growth in Honduras.">
+  <meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/favicon.ico">
+  <meta property="og:url" content="https://margarethdis.github.io/wdd231/chamber/index.html">
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Style sheets generales -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <!-- Style sheets exclusivos de la Home Page -->
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/home-larger.css">
+
+  <!-- Scripts -->
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__brand">
+      <img src="images/logo_camara.png" alt="San Pedro Sula Chamber of Commerce Logo" class="site-header__logo">
+      <p class="site-header__title">San Pedro Sula<br>Chamber of Commerce</p>
+    </div>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
+      &#9776;
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main class="home-grid">
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero-city.webp" alt="San Pedro Sula Chamber of Commerce" class="hero-img">
+      <div class="hero-cta">
+        <h1>Welcome to San Pedro Sula Chamber</h1>
+        <p>Growing business and opportunities in Honduras together.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="home-card events-card">
+      <h2>Upcoming Events</h2>
+      <ul class="events-list">
+        <li><strong>Business Forum 2026:</strong> Aug 10 @ 9:00 AM - SPS Convention Center</li>
+        <li><strong>Networking Night:</strong> Aug 22 @ 6:30 PM - Guamilito Hub</li>
+        <li><strong>Export Opportunities Expo:</strong> Sep 05 @ 10:00 AM - Chamber Main Auditorium</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="home-card weather-card">
+      <h2>San Pedro Sula Weather</h2>
+      <div class="weather-current">
+        <p class="temp-display"><span id="current-temp">--</span>°F</p>
+        <p id="weather-desc" class="weather-desc">Loading weather...</p>
+      </div>
+      <h3>3-Day Forecast</h3>
+      <div id="forecast-container" class="forecast-container">
+        <!-- Generado dinámicamente desde weather.js -->
+      </div>
+    </section>
+
+    <!-- Spotlights Section -->
+    <section class="home-card spotlights-card">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-cards" class="spotlights-grid">
+        <!-- Generado dinámicamente desde spotlights.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>San Pedro Sula Chamber of Commerce</h2>
+        <p>Guamilito Neighborhood, San Pedro Sula, Cortés, Honduras</p>
+        <p>Phone: +504 2550-0000</p>
+        <p>Email: info@spschamber.hn</p>
+        <div class="site-footer__social">
+            <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
+                <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener">
+                <img src="images/x-icon.svg" alt="X Twitter official profile icon" class="social-icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
+            </a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Development</h2>
+        <p>Margareth Daniela Ramos Discua</p>
+        <p>WDD 231</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+
+    <p class="site-footer__legal">&copy; <span id="current-year"></span> San Pedro Sula Chamber of Commerce. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
