@@ -68,3 +68,23 @@
     flex: 1;
   }
 }
+
+/*el estilo del join que tenemos no lo vambio sino que lo agrego aqui*/
+
+@media screen and (min-width: 768px) {
+
+  .join-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .join-form {
+    flex: 2;
+  }
+
+  .membership-cards {
+    flex: 1;
+    flex-direction: column;
+  }
+
+}

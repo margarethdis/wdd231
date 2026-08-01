@@ -1,39 +1,45 @@
-// timestamp oculto: llena la fecha y hora en que se cargo la pagina
-document.querySelector('#timestamp').value = new Date().toLocaleString();
+// ===== Timestamp: guarda fecha/hora actual en el campo oculto al cargar el formulario =====
+const timestampField = document.querySelector('#timestamp');
+if (timestampField) {
+  timestampField.value = new Date().toISOString();
+}
 
-// footer: año actual y ultima modificacion (igual que en directory.js)
-document.querySelector('#current-year').textContent = new Date().getFullYear();
-document.querySelector('#last-modified').textContent = document.lastModified;
+// ===== Nav toggle (hamburguesa) - igual que en directory.js =====
+const navToggle = document.querySelector('#nav-toggle');
+const mainNav = document.querySelector('#main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+}
 
-// modales: un solo listener que sirve para las 4 tarjetas
-const cardLinks = document.querySelectorAll('.card-link');
-
-cardLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const modalId = link.getAttribute('data-modal');
+// ===== Modales de membresía =====
+const modalButtons = document.querySelectorAll('.modal-btn');
+modalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
     const modal = document.querySelector(`#${modalId}`);
-    modal.showModal();
+    if (modal) {
+      modal.showModal();
+    }
   });
 });
 
-// boton close de cada modal
-const closeButtons = document.querySelectorAll('.close-modal');
-
+const closeButtons = document.querySelectorAll('.modal-close');
 closeButtons.forEach((button) => {
   button.addEventListener('click', () => {
     button.closest('dialog').close();
   });
 });
 
-// animacion de entrada de las tarjetas al cargar la pagina
-const cards = document.querySelectorAll('.card');
+// ===== Footer: última modificación y año actual =====
+const lastModifiedSpan = document.querySelector('#last-modified');
+if (lastModifiedSpan) {
+  lastModifiedSpan.textContent = document.lastModified;
+}
 
-cards.forEach((card, index) => {
-  card.style.opacity = 0;
-  setTimeout(() => {
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    card.style.opacity = 1;
-    card.style.transform = 'translateY(0)';
-  }, index * 150);
-});
+const currentYearSpan = document.querySelector('#current-year');
+if (currentYearSpan) {
+  currentYearSpan.textContent = new Date().getFullYear();
+}

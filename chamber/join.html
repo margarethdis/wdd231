@@ -10,17 +10,17 @@
 
   <meta property="og:title" content="Join | San Pedro Sula Chamber of Commerce">
   <meta property="og:description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
-  <meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/favicon.svg">
+  <meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/favicon.ico">
   <meta property="og:url" content="https://margarethdis.github.io/wdd231/chamber/join.html">
 
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Style sheets -->
+  <!-- Style sheets: normalize first, then small, then larger -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
@@ -47,134 +47,128 @@
   </header>
 
   <main>
-    <h1>Join Chamber Form</h1>
+    <div class="join-intro">
+      <h1>Join the Chamber</h1>
+      <p>Become a member of the San Pedro Sula Chamber of Commerce and grow your business with us.</p>
+    </div>
 
     <div class="join-layout">
 
-      <form action="thankyou.html" method="get">
+      <!-- ===== FORM ===== -->
+      <form action="thankyou.html" method="get" class="join-form">
 
-        <label for="first-name">
-          First Name
-          <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
-        </label>
+        <fieldset>
+          <legend>Applicant Information</legend>
 
-        <label for="last-name">
-          Last Name
-          <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
-        </label>
+          <label for="first-name">
+            First Name
+            <input type="text" id="first-name" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+          </label>
 
-        <label for="org-title">
-          Title / Organizational Role
-          <input type="text" id="org-title" name="org-title" title="Enter your title (letters and spaces only, at least 7 characters)" autocomplete="organization-title" pattern="[A-Za-z -]{7,}">
-        </label>
+          <label for="last-name">
+            Last Name
+            <input type="text" id="last-name" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+          </label>
 
-        <label for="email">
-          Email
-          <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@gmail.com" required>
-        </label>
+          <label for="org-title">
+            Organizational Title
+            <input type="text" id="org-title" name="orgTitle" title="Your title within the organization (letters, hyphens, and spaces only, minimum 7 characters)" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+          </label>
 
-        <label for="phone">
-          Mobile Phone
-          <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel" required>
-        </label>
+          <label for="email">
+            Email Address
+            <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+          </label>
 
-        <label for="org-name">
-          Company Name
-          <input type="text" id="org-name" name="org-name" title="Enter your company name" autocomplete="organization" required>
-        </label>
+          <label for="mobile-phone">
+            Mobile Phone
+            <input type="tel" id="mobile-phone" name="mobilePhone" title="Enter your mobile phone number" autocomplete="tel" required>
+          </label>
 
-        <label for="membership">
-          Membership Level
-          <select id="membership" name="membership" title="Select your membership level" required>
-            <option value="" disabled selected>Select a membership level...</option>
-            <option value="np">NP Membership</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
+          <label for="business-name">
+            Business/Organization Name
+            <input type="text" id="business-name" name="businessName" title="Enter your business or organization name" autocomplete="organization" required>
+          </label>
 
-        <label for="description">
-          Business Description
-          <textarea id="description" name="description" title="Enter a brief description of your business" required></textarea>
-        </label>
+          <label for="membership-level">
+            Membership Level
+            <select id="membership-level" name="membershipLevel" title="Select a membership level" required>
+              <option value="">-- Select a level --</option>
+              <option value="np">NP Membership (Non-Profit)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
 
-        <input type="hidden" id="timestamp" name="timestamp">
+          <label for="business-description">
+            Business/Organization Description
+            <textarea id="business-description" name="businessDescription" title="Briefly describe your business or organization" rows="4"></textarea>
+          </label>
 
-        <input type="submit" value="Submit Application">
+          <input type="hidden" name="timestamp" id="timestamp">
 
+          <input type="submit" value="Submit Application">
+        </fieldset>
       </form>
 
-      <!-- Tarjetas de membresia -->
-      <div class="membership-cards">
+      <!-- ===== MEMBERSHIP CARDS ===== -->
+      <section class="membership-cards">
 
-        <div class="card card-np">
+        <div class="member-card card-anim" style="--delay: 0s">
           <h2>NP Membership</h2>
-          <p>Free membership for non-profit organizations.</p>
-          <a href="#np-modal" class="card-link" data-modal="np-modal">Learn More</a>
+          <p>Free for qualifying non-profit organizations.</p>
+          <button class="modal-btn" data-modal="modal-np">Learn More</button>
         </div>
 
-        <div class="card card-bronze">
+        <div class="member-card card-anim" style="--delay: .15s">
           <h2>Bronze Membership</h2>
-          <p>Basic paid membership for small businesses.</p>
-          <a href="#bronze-modal" class="card-link" data-modal="bronze-modal">Learn More</a>
+          <p>Entry-level membership for small businesses.</p>
+          <button class="modal-btn" data-modal="modal-bronze">Learn More</button>
         </div>
 
-        <div class="card card-silver">
+        <div class="member-card card-anim" style="--delay: .3s">
           <h2>Silver Membership</h2>
-          <p>Mid-level membership with extra visibility.</p>
-          <a href="#silver-modal" class="card-link" data-modal="silver-modal">Learn More</a>
+          <p>Enhanced visibility and networking benefits.</p>
+          <button class="modal-btn" data-modal="modal-silver">Learn More</button>
         </div>
 
-        <div class="card card-gold">
+        <div class="member-card card-anim" style="--delay: .45s">
           <h2>Gold Membership</h2>
-          <p>Top-level membership with maximum benefits.</p>
-          <a href="#gold-modal" class="card-link" data-modal="gold-modal">Learn More</a>
+          <p>Our premier membership tier with maximum exposure.</p>
+          <button class="modal-btn" data-modal="modal-gold">Learn More</button>
         </div>
 
-      </div>
-
+      </section>
     </div>
 
-    <!-- Modales de cada nivel -->
-    <dialog id="np-modal" class="membership-modal">
-      <h2>NP Membership Benefits</h2>
-      <ul>
-        <li>No membership fee</li>
-        <li>Listing in the online directory</li>
-        <li>Access to networking events</li>
-      </ul>
-      <button class="close-modal">Close</button>
+    <!-- ===== MODALS ===== -->
+    <dialog id="modal-np" class="member-modal">
+      <h2>NP Membership</h2>
+      <p><strong>Cost:</strong> Free</p>
+      <p>Includes access to networking events, a directory listing, and monthly newsletters. Designed for registered non-profit organizations serving the community.</p>
+      <button class="modal-close">Close</button>
     </dialog>
 
-    <dialog id="bronze-modal" class="membership-modal">
-      <h2>Bronze Membership Benefits</h2>
-      <ul>
-        <li>Listing in the online directory</li>
-        <li>Access to networking events</li>
-        <li>Discount on chamber events</li>
-      </ul>
-      <button class="close-modal">Close</button>
+    <dialog id="modal-bronze" class="member-modal">
+      <h2>Bronze Membership</h2>
+      <p><strong>Cost:</strong> L. 500/month</p>
+      <p>Includes a directory listing, one networking event per quarter, and access to member-only workshops.</p>
+      <button class="modal-close">Close</button>
     </dialog>
 
-    <dialog id="silver-modal" class="membership-modal">
-      <h2>Silver Membership Benefits</h2>
-      <ul>
-        <li>All Bronze benefits</li>
-        <li>Featured listing in the directory</li>
-        <li>Access to training workshops</li>
-      </ul>
-      <button class="close-modal">Close</button>
+    <dialog id="modal-silver" class="member-modal">
+      <h2>Silver Membership</h2>
+      <p><strong>Cost:</strong> L. 1,200/month</p>
+      <p>All Bronze benefits plus discounted event tickets, a featured directory listing, and quarterly promotional emails.</p>
+      <button class="modal-close">Close</button>
     </dialog>
 
-    <dialog id="gold-modal" class="membership-modal">
-      <h2>Gold Membership Benefits</h2>
-      <ul>
-        <li>All Silver benefits</li>
-        <li>Spotlight position on the home page</li>
-        <li>Free admission to all chamber events</li>
-      </ul>
-      <button class="close-modal">Close</button>
+    <dialog id="modal-gold" class="member-modal">
+      <h2>Gold Membership</h2>
+      <p><strong>Cost:</strong> L. 2,500/month</p>
+      <p>All Silver benefits plus a homepage spotlight feature, free event registrations, and priority training access.</p>
+      <button class="modal-close">Close</button>
     </dialog>
 
   </main>
@@ -187,15 +181,15 @@
         <p>Phone: +504 2550-0000</p>
         <p>Email: info@spschamber.hn</p>
         <div class="site-footer__social">
-          <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
-            <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
-          </a>
-          <a href="https://x.com" target="_blank" rel="noopener">
-            <img src="images/x-icon.svg" alt="X Twitter official profile icon" class="social-icon">
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener">
-            <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
-          </a>
+            <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
+                <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener">
+                <img src="images/x-icon.svg" alt="X Twitter official profile icon" class="social-icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
+            </a>
         </div>
       </div>
 
