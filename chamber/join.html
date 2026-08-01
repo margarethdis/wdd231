@@ -4,36 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Join | San Pedro Sula Chamber of Commerce</title>
-  <meta name="description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
-  <meta name="author" content="Margareth Daniela Ramos Discua">
+<title>Join | San Pedro Sula Chamber of Commerce</title>
+<meta name="description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
+<meta name="author" content="Margareth Daniela Ramos Discua">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Join | San Pedro Sula Chamber of Commerce">
-  <meta property="og:description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
-  <meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/favicon.svg">
-  <meta property="og:url" content="https://margarethdis.github.io/wdd231/chamber/join.html">
+<meta property="og:title" content="Join | San Pedro Sula Chamber of Commerce">
+<meta property="og:description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
+<meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/favicon.ico">
+<meta property="og:url" content="https://margarethdis.github.io/wdd231/chamber/join.html">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
+  <!-- Style sheets: normalize first, then small, then larger -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- Scripts -->
-  <script src="scripts/join.js" defer></script>
+<script src="scripts/join.js" defer></script>
+
 </head>
 <body>
 
   <header class="site-header">
     <div class="site-header__brand">
+     
       <img src="images/logo_camara.png" alt="San Pedro Sula Chamber of Commerce Logo" class="site-header__logo">
       <p class="site-header__title">San Pedro Sula<br>Chamber of Commerce</p>
     </div>
@@ -43,68 +42,146 @@
     </button>
 
     <nav id="main-nav" class="main-nav">
-      <a href="index.html">Home</a>
+      <a href="#">Home</a>
       <a href="directory.html">Directory</a>
       <a href="join.html" aria-current="page">Join</a>
     </nav>
+
   </header>
 
   <main>
-    <h1>Join the Chamber of Commerce</h1>
 
-    <form action="thankyou.html" method="get" class="join-form">
-      
-      <label for="first-name">
-        First Name
-        <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
-      </label>
+    <!--aqui va ir mi form -->
+    <h1>join chamber form</h1>
 
-      <label for="last-name">
-        Last Name
-        <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
-      </label>
+    <div class="join-layout">
 
-      <label for="org-title">
-        Title / Organizational Role
-        <input type="text" id="org-title" name="org-title" title="Enter your title (letters, hyphens, and spaces only)" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s\-]{2,}">
-      </label>
+    <!--mantengo el estilo solo voy a agregar clases s mi css-->
+    <form action="thankyou.html" method="get">
 
-      <label for="email">
-        Email
-        <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@gmail.com" required>
-      </label>
+        <label for="first-name">
+            FIRST NAME
+            <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+        </label>
 
-      <label for="phone">
-        Mobile Phone
-        <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel" required>
-      </label>
+        <label for="last-name">
+            LAST NAME
+            <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+        </label>
 
-      <label for="org-name">
-        Company / Organization Name
-        <input type="text" id="org-name" name="org-name" title="Enter your company name" autocomplete="organization" required>
-      </label>
+        <label for="org-title">
+            Title
+            <input type="text" id="org-title" name="org-title" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+        </label>
 
-      <label for="membership">
-        Membership Level
-        <select id="membership" name="membership" title="Select your membership level" required>
-          <option value="" disabled selected>Select a membership level...</option>
-          <option value="np">NP Membership (Non-Profit)</option>
-          <option value="bronze">Bronze Membership</option>
-          <option value="silver">Silver Membership</option>
-          <option value="gold">Gold Membership</option>
-        </select>
-      </label>
+        <label for="email">
+            EMAIL
+            <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@gmail.com" required>
+        </label>
 
-      <label for="description">
-        Business Description
-        <textarea id="description" name="description" title="Enter a brief description of your business" rows="4"></textarea>
-      </label>
+        <label for="phone">
+            PHONE
+            <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel" required>
+        </label>
 
-      <!-- Timestamp populated via JavaScript -->
-      <input type="hidden" id="timestamp" name="timestamp">
+        <label for="org-name">
+            COMPANY NAME
+            <input type="text" id="org-name" name="org-name" title="Enter your company name" autocomplete="organization" required>
+        </label>
 
-      <input type="submit" value="Submit Application" class="submit-btn">
+        <label for="membership">
+            MEMBERSHIP LEVEL
+            <select id="membership" name="membership" title="Select your membership level" required>
+                <option value="np">NP Membership</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+        </label>
+
+        <label for="description">
+            Business Description
+            <textarea id="description" name="description" title="Enter a brief description of your business" required></textarea>
+        </label>
+
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <input type="submit" value="Submit Application">
+
     </form>
+
+    <!-- tarjetas de membresia -->
+    <div class="membership-cards">
+
+      <div class="card card-np">
+        <h2>NP Membership</h2>
+        <p>Free membership for non-profit organizations.</p>
+        <a href="#np-modal" class="card-link" data-modal="np-modal">Learn More</a>
+      </div>
+
+      <div class="card card-bronze">
+        <h2>Bronze Membership</h2>
+        <p>Basic paid membership for small businesses.</p>
+        <a href="#bronze-modal" class="card-link" data-modal="bronze-modal">Learn More</a>
+      </div>
+
+      <div class="card card-silver">
+        <h2>Silver Membership</h2>
+        <p>Mid-level membership with extra visibility.</p>
+        <a href="#silver-modal" class="card-link" data-modal="silver-modal">Learn More</a>
+      </div>
+
+      <div class="card card-gold">
+        <h2>Gold Membership</h2>
+        <p>Top-level membership with maximum benefits.</p>
+        <a href="#gold-modal" class="card-link" data-modal="gold-modal">Learn More</a>
+      </div>
+
+    </div>
+
+    </div>
+
+    <!-- modales de cada nivel -->
+    <dialog id="np-modal" class="membership-modal">
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>No membership fee</li>
+        <li>Listing in the online directory</li>
+        <li>Access to networking events</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal" class="membership-modal">
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>Listing in the online directory</li>
+        <li>Access to networking events</li>
+        <li>Discount on chamber events</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal" class="membership-modal">
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Featured listing in the directory</li>
+        <li>Access to training workshops</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal" class="membership-modal">
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Spotlight position on the home page</li>
+        <li>Free admission to all chamber events</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </dialog>
+
   </main>
 
   <footer class="site-footer">
@@ -115,15 +192,15 @@
         <p>Phone: +504 2550-0000</p>
         <p>Email: info@spschamber.hn</p>
         <div class="site-footer__social">
-          <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
-            <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
-          </a>
-          <a href="https://x.com" target="_blank" rel="noopener">
-            <img src="images/x-icon.svg" alt="X Twitter official profile icon" class="social-icon">
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener">
-            <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
-          </a>
+            <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
+                <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener">
+                <img src="images/x-icon.svg" alt="X Twitter official profile icon" class="social-icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
+            </a>
         </div>
       </div>
 
