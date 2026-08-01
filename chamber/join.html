@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Join | San Pedro Sula Chamber of Commerce</title>
+<meta name="description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
+<meta name="author" content="Margareth Daniela Ramos Discua">
+
+<meta property="og:title" content="Join | San Pedro Sula Chamber of Commerce">
+<meta property="og:description" content="Apply for membership with the San Pedro Sula Chamber of Commerce.">
+<meta property="og:image" content="https://margarethdis.github.io/wdd231/chamber/images/favicon.ico">
+<meta property="og:url" content="https://margarethdis.github.io/wdd231/chamber/join.html">
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Style sheets: normalize first, then small, then larger -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+<script src="scripts/join.js" defer></script>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__brand">
+     
+      <img src="images/logo_camara.png" alt="San Pedro Sula Chamber of Commerce Logo" class="site-header__logo">
+      <p class="site-header__title">San Pedro Sula<br>Chamber of Commerce</p>
+    </div>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
+      &#9776;
+    </button>
+
+
+
+<nav id="main-nav" class="main-nav">
+  <a href="#">Home</a>
+  <a href="directory.html">Directory</a>
+  <a href="join.html" aria-current="page">Join</a>
+</nav>
+
+  </header>
+
+  <main>
+
+<!--aqui va ir mi form -->
+<h1>join chamber form</h1>
+
+<!--mantengo el estilo solo voy a agregar clases s mi css-->
+<form action="thankyou.html" method="get">
+
+    <label for="first-name">
+        FIRST NAME
+        <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="give-name" required>
+    </label>
+
+    <label for="last-name">
+        LAST NAME
+        <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+    </label>
+
+    <label for="email">
+        EMAIL
+        <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" required>
+    </label>
+
+    <label for="phone">
+        PHONE
+        <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel" required>
+    </label>
+
+    <label for="org-name">
+        COMPANY NAME
+        <input type="text" id="org-name" name="org-name" title="Enter your company name" required>
+    </label>
+
+    <label for="membership">
+        MEMBERSHIP LEVEL
+        <select id="membership" name="membership" title="Select your membership level" required>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+    </label>
+
+    <label for="description">
+        Businnes Description
+        <textarea id="description" name="description" title="Enter a brief description of your business" required></textarea>
+    </label>
+
+    <input type="hidden" id="timestamp" name="timestamp">
+
+    <input type="submit" value="Submit Application">
+
+</form>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>San Pedro Sula Chamber of Commerce</h2>
+        <p>Guamilito Neighborhood, San Pedro Sula, Cortés, Honduras</p>
+        <p>Phone: +504 2550-0000</p>
+        <p>Email: info@spschamber.hn</p>
+        <div class="site-footer__social">
+            <a href="https://github.com/margarethdis" target="_blank" rel="noopener">
+                <img src="images/github-icon.svg" alt="GitHub repository profile icon" class="social-icon">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener">
+                <img src="images/x-icon.svg" alt="X Twitter official profile icon" class="social-icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn official profile icon" class="social-icon">
+            </a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Development</h2>
+        <p>Margareth Daniela Ramos Discua</p>
+        <p>WDD 231</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+
+    <p class="site-footer__legal">&copy; <span id="current-year"></span> San Pedro Sula Chamber of Commerce. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
