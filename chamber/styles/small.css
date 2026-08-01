@@ -335,6 +335,11 @@ main {
 /*este es mi estilo apra join html y thanyou html*/
   
 
+/* ============================================
+   PEGAR ESTO AL FINAL DE: chamber/styles/small.css
+   (estilos base / mobile-first para join.html y thankyou.html)
+   ============================================ */
+
 .join-intro,
 .thankyou-intro {
   padding: 0 1rem;
@@ -347,7 +352,7 @@ main {
   padding: 0 1rem;
 }
 
-/* Formulario */
+/* ----- Formulario ----- */
 .join-form fieldset {
   border: 2px solid var(--color-gold, #c9a227);
   border-radius: 8px;
@@ -394,10 +399,11 @@ main {
 }
 
 .join-form input[type="submit"]:hover {
-  background-color: var(--color-gold, #c9a227);
+  /* dorado oscurecido: el tono claro (#c9a227) no cumple 4.5:1 con texto blanco */
+  background-color: #91680d;
 }
 
-/* Tarjetas de membresía */
+/* ----- Tarjetas de membresía ----- */
 .membership-cards {
   display: flex;
   flex-direction: column;
@@ -415,8 +421,13 @@ main {
   opacity: 0;
   transform: translateY(15px);
   animation: card-fade-in .6s ease forwards;
-  animation-delay: var(--delay, 0s);
 }
+
+/* retraso escalonado sin usar estilos inline */
+.card-anim--1 { animation-delay: 0s; }
+.card-anim--2 { animation-delay: .15s; }
+.card-anim--3 { animation-delay: .3s; }
+.card-anim--4 { animation-delay: .45s; }
 
 @keyframes card-fade-in {
   to {
@@ -431,7 +442,8 @@ main {
 }
 
 .modal-btn {
-  background-color: var(--color-gold, #c9a227);
+  /* dorado oscurecido (#91680d): pasa 5.01:1 de contraste con texto blanco, el tono claro no llegaba a 4.5:1 */
+  background-color: #91680d;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -444,7 +456,7 @@ main {
   background-color: var(--color-blue, #1a3e6f);
 }
 
-/*Modales  */
+/* ----- Modales ----- */
 .member-modal {
   border: none;
   border-radius: 8px;
