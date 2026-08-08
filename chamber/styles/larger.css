@@ -88,3 +88,58 @@
   }
 
 }
+
+/* ============================================
+   Estilos para discover.html — agregar al final de larger.css
+   ============================================ */
+
+/* ----- Pantallas medianas (641px - 1024px) ----- */
+@media screen and (min-width: 700px) {
+  .discover-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e"
+      "f g"
+      "h h";
+    gap: 1.25rem;
+  }
+
+  /* El efecto hover solo aplica desde este breakpoint en adelante (no en móvil) */
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+  }
+}
+
+/* ----- Pantallas grandes (1025px en adelante) ----- */
+@media screen and (min-width: 1000px) {
+  .discover-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a a b c"
+      "a a d e"
+      "f g h h";
+    gap: 1.5rem;
+  }
+
+  /* La tarjeta "a" (Parque Central) queda destacada, ocupa 2x2 */
+  .area-a img {
+    height: 100%;
+    min-height: 300px;
+  }
+
+  .area-a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .area-a figure {
+    flex: 1;
+  }
+}
